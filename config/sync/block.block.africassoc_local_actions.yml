@@ -1,0 +1,20 @@
+uuid: 9f26370c-13b2-4288-9e23-3f0c0320ec05
+langcode: en
+status: true
+dependencies:
+  theme:
+    - africassoc
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: africassoc_local_actions
+theme: africassoc
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

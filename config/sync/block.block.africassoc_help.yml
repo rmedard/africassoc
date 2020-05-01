@@ -1,0 +1,22 @@
+uuid: f9cedaa9-a7ec-4af9-93a1-a171b868f893
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - africassoc
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: africassoc_help
+theme: africassoc
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

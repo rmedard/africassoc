@@ -1,0 +1,20 @@
+uuid: 35d81f8e-c146-4473-9936-b4a5d18f6b86
+langcode: en
+status: true
+dependencies:
+  theme:
+    - africassoc
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: africassoc_page_title
+theme: africassoc
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

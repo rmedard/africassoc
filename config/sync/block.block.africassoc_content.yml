@@ -1,0 +1,22 @@
+uuid: 5d2409af-c0a7-43fb-a692-5cce73e443f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - africassoc
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: africassoc_content
+theme: africassoc
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

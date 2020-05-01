@@ -1,0 +1,25 @@
+uuid: 8ef9a7d5-ac2e-4655-8e87-02d154917c66
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - africassoc
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: africassoc_branding
+theme: africassoc
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }
