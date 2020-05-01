@@ -20,4 +20,5 @@ gen
 /.gitattributes
 /.ht.router.php
 /.htaccess
-
+/error_docs
+/logs
