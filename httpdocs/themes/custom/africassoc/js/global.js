@@ -3,12 +3,12 @@
  * Global utilities.
  *
  */
-(function($, Drupal) {
+(function ($, Drupal) {
 
   'use strict';
 
   Drupal.behaviors.bootstrap_barrio_subtheme = {
-    attach: function(context, settings) {
+    attach: function (context, settings) {
       var position = $(window).scrollTop();
       $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
@@ -21,7 +21,8 @@
         if (scroll > position) {
           $('body').addClass("scrolldown");
           $('body').removeClass("scrollup");
-        } else {
+        }
+        else {
           $('body').addClass("scrollup");
           $('body').removeClass("scrolldown");
         }

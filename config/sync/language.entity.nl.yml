@@ -1,0 +1,9 @@
+uuid: ec2aeeac-5746-4658-9e62-a5e513875913
+langcode: en
+status: true
+dependencies: {  }
+id: nl
+label: Dutch
+direction: ltr
+weight: 2
+locked: false

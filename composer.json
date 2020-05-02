@@ -16,11 +16,13 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "drupal/admin_toolbar": "^2.2",
         "drupal/bootstrap_barrio": "^4.25",
         "drupal/bootstrap_sass": "^1.10",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
+        "drupal/module_filter": "^3.1",
         "drush/drush": "^10.2"
     },
     "conflict": {
@@ -38,30 +40,14 @@
             }
         },
         "installer-paths": {
-            "httpdocs/core": [
-                "type:drupal-core"
-            ],
-            "httpdocs/libraries/{$name}": [
-                "type:drupal-library"
-            ],
-            "httpdocs/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "httpdocs/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "httpdocs/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "drush/Commands/contrib/{$name}": [
-                "type:drupal-drush"
-            ],
-            "httpdocs/modules/custom/{$name}": [
-                "type:drupal-custom-module"
-            ],
-            "httpdocs/themes/custom/{$name}": [
-                "type:drupal-custom-theme"
-            ]
+            "httpdocs/core": ["type:drupal-core"],
+            "httpdocs/libraries/{$name}": ["type:drupal-library"],
+            "httpdocs/modules/contrib/{$name}": ["type:drupal-module"],
+            "httpdocs/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "httpdocs/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "httpdocs/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "httpdocs/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
         "drupal-core-project-message": {
             "include-keys": [

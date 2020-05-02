@@ -1,0 +1,25 @@
+uuid: 525e09f8-2a30-4d3d-8a0b-1b8019fad87c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.vertical-menu
+  module:
+    - system
+  theme:
+    - africassoc
+id: verticalmenu
+theme: africassoc
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:vertical-menu'
+settings:
+  id: 'system_menu_block:vertical-menu'
+  label: 'Vertical Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
