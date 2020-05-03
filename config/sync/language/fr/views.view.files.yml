@@ -1,0 +1,16 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
+      fields:
+        filename:
+          label: Nom
+        filemime:
+          label: 'Type MIME'
+      filters:
+        filemime:
+          expose:
+            label: 'Type MIME'

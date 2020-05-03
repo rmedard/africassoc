@@ -1,0 +1,26 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
+      fields:
+        title:
+          label: Titel
+        type:
+          label: Inhoudstype
+        name:
+          label: Auteur
+        operations:
+          label: Bewerkingen
+      filters:
+        title:
+          expose:
+            label: Titel
+        type:
+          expose:
+            label: Inhoudstype
+        langcode:
+          expose:
+            label: Taal

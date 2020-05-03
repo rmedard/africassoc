@@ -1,9 +1,9 @@
-uuid: 9b02970d-e4f3-441f-b222-81514d109c77
+uuid: 1bf0e57e-c504-467c-962b-d9a5b7c4c3c2
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.basic
+    - node.type.service
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: block_content.basic
-target_entity_type_id: block_content
-target_bundle: basic
+id: node.service
+target_entity_type_id: node
+target_bundle: service
 default_langcode: site_default
 language_alterable: true

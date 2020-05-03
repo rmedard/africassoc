@@ -1,0 +1,33 @@
+description: 'Entrées récentes du journal'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
+      fields:
+        severity:
+          label: Importance
+        type:
+          label: Type
+        timestamp:
+          label: Date
+        message:
+          label: Message
+        name:
+          label: Utilisateur
+        link:
+          label: Actions
+      filters:
+        type:
+          expose:
+            label: Type
+        severity:
+          expose:
+            label: Importance
+      title: 'Entrées récentes du journal'
+      empty:
+        area:
+          admin_label: 'Aucune entrée du journal n''est disponible.'
+          content: 'Aucune entrée du journal n''est disponible.'

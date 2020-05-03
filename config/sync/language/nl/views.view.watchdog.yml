@@ -1,0 +1,33 @@
+description: 'Recente logberichten'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
+      fields:
+        severity:
+          label: Ernst
+        type:
+          label: Type
+        timestamp:
+          label: Datum
+        message:
+          label: Bericht
+        name:
+          label: Gebruiker
+        link:
+          label: Bewerkingen
+      filters:
+        type:
+          expose:
+            label: Type
+        severity:
+          expose:
+            label: Ernst
+      title: 'Recente logberichten'
+      empty:
+        area:
+          admin_label: 'Geen logberichten beschikbaar.'
+          content: 'Geen logberichten beschikbaar.'

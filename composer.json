@@ -19,10 +19,12 @@
         "drupal/admin_toolbar": "^2.2",
         "drupal/bootstrap_barrio": "^4.25",
         "drupal/bootstrap_sass": "^1.10",
+        "drupal/content_sync": "^2.1",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/module_filter": "^3.1",
+        "drupal/pathauto": "^1.8",
         "drush/drush": "^10.2"
     },
     "conflict": {
