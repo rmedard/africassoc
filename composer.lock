@@ -1630,17 +1630,17 @@
         },
         {
             "name": "drupal/bootstrap_barrio",
-            "version": "4.25.0",
+            "version": "4.27.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
-                "reference": "8.x-4.25"
+                "reference": "8.x-4.27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.25.zip",
-                "reference": "8.x-4.25",
-                "shasum": "7f0b2c23ed66dc202a6b94c6219c826c04fac882"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.27.zip",
+                "reference": "8.x-4.27",
+                "shasum": "902dd93e487cc84a14461f9152b8a539626f8b41"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -1649,8 +1649,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.25",
-                    "datestamp": "1587345806",
+                    "version": "8.x-4.27",
+                    "datestamp": "1588520756",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1680,17 +1680,17 @@
         },
         {
             "name": "drupal/bootstrap_sass",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_sass.git",
-                "reference": "8.x-1.10"
+                "reference": "8.x-1.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_sass-8.x-1.10.zip",
-                "reference": "8.x-1.10",
-                "shasum": "7513e95e9da3a5e01065c4a4c5ec025e56455e84"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_sass-8.x-1.11.zip",
+                "reference": "8.x-1.11",
+                "shasum": "51f4ecd5fbcb2751496a513b6117c95fbcb7825a"
             },
             "require": {
                 "drupal/bootstrap_barrio": "^4.8.0",
@@ -1699,8 +1699,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.10",
-                    "datestamp": "1586099697",
+                    "version": "8.x-1.11",
+                    "datestamp": "1588445134",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3575,16 +3575,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.3",
+            "version": "v0.10.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "2bde2fa03e05dff0aee834598b951d6fc7c6fe02"
+                "reference": "a8aec1b2981ab66882a01cce36a49b6317dc3560"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/2bde2fa03e05dff0aee834598b951d6fc7c6fe02",
-                "reference": "2bde2fa03e05dff0aee834598b951d6fc7c6fe02",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/a8aec1b2981ab66882a01cce36a49b6317dc3560",
+                "reference": "a8aec1b2981ab66882a01cce36a49b6317dc3560",
                 "shasum": ""
             },
             "require": {
@@ -3643,7 +3643,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2020-04-07T06:44:48+00:00"
+            "time": "2020-05-03T19:32:03+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
