@@ -73,8 +73,12 @@ div#block-languageswitcher nav.links {
   }
 }
 
-nav#block-verticalmenu .nav-pills {
-  a.nav-link:hover {
-    background-color: $primary-shade;
+nav#block-verticalmenu {
+  padding: 0.6rem 0.6rem;
+  .nav-pills {
+    a.nav-link:hover {
+      color: $accent-shade;
+      background-color: $primary-shade;
+    }
   }
 }

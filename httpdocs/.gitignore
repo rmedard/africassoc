@@ -42,7 +42,6 @@ sites/simpletest
 # simpletest
 /core/
 /themes/contrib/
-/themes/custom/
 /modules/contrib/
 /.csslintrc
 /.eslintignore
