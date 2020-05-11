@@ -1630,17 +1630,17 @@
         },
         {
             "name": "drupal/bootstrap_barrio",
-            "version": "4.27.0",
+            "version": "4.28.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
-                "reference": "8.x-4.27"
+                "reference": "8.x-4.28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.27.zip",
-                "reference": "8.x-4.27",
-                "shasum": "902dd93e487cc84a14461f9152b8a539626f8b41"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.28.zip",
+                "reference": "8.x-4.28",
+                "shasum": "2608e4545a0efe4c2d4b76e109e77264a3a51785"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -1649,8 +1649,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.27",
-                    "datestamp": "1588520756",
+                    "version": "8.x-4.28",
+                    "datestamp": "1589051361",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1659,7 +1659,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -1680,17 +1680,17 @@
         },
         {
             "name": "drupal/bootstrap_sass",
-            "version": "1.11.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_sass.git",
-                "reference": "8.x-1.11"
+                "reference": "8.x-1.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_sass-8.x-1.11.zip",
-                "reference": "8.x-1.11",
-                "shasum": "51f4ecd5fbcb2751496a513b6117c95fbcb7825a"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_sass-8.x-1.12.zip",
+                "reference": "8.x-1.12",
+                "shasum": "60d9986ede850b1304b4c1a087e160147e057086"
             },
             "require": {
                 "drupal/bootstrap_barrio": "^4.8.0",
@@ -1699,8 +1699,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.11",
-                    "datestamp": "1588445134",
+                    "version": "8.x-1.12",
+                    "datestamp": "1589051478",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4675,16 +4675,16 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.15.0",
+            "version": "v1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "37b0976c78b94856543260ce09b460a7bc852747"
+                "reference": "42fda6d7380e5c940d7f68341ccae89d5ab9963b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/37b0976c78b94856543260ce09b460a7bc852747",
-                "reference": "37b0976c78b94856543260ce09b460a7bc852747",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/42fda6d7380e5c940d7f68341ccae89d5ab9963b",
+                "reference": "42fda6d7380e5c940d7f68341ccae89d5ab9963b",
                 "shasum": ""
             },
             "require": {
@@ -4693,7 +4693,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15-dev"
+                    "dev-master": "1.16-dev"
                 }
             },
             "autoload": {
@@ -4740,7 +4740,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-02-27T09:26:54+00:00"
+            "time": "2020-05-08T17:28:34+00:00"
         },
         {
             "name": "symfony/polyfill-util",
