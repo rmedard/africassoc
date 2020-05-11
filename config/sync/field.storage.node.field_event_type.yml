@@ -1,0 +1,45 @@
+uuid: 31e8f798-3e7c-4842-8b91-f712dcff69ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_event_type
+field_name: field_event_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: concert
+      label: Concert
+    -
+      value: show
+      label: Show
+    -
+      value: festival
+      label: Festival
+    -
+      value: conference
+      label: Conference
+    -
+      value: seminar
+      label: Seminar
+    -
+      value: workshop
+      label: Workshop
+    -
+      value: meeting
+      label: Meeting
+    -
+      value: assembly
+      label: 'General Assembly'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

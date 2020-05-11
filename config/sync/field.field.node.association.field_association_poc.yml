@@ -1,0 +1,19 @@
+uuid: 4630ab27-1f8d-4a3a-8428-1b9357ebdfad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_association_poc
+    - node.type.association
+id: node.association.field_association_poc
+field_name: field_association_poc
+entity_type: node
+bundle: association
+label: 'Person of contact'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

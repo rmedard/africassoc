@@ -1,0 +1,23 @@
+uuid: ba9857f4-4eb3-4cb8-91ef-7de01eea23ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assoc_confirmation
+    - node.type.association
+id: node.association.field_assoc_confirmation
+field_name: field_assoc_confirmation
+entity_type: node
+bundle: association
+label: 'My association undertakes to fulfill its duties as defined in the statutes and internal regulations of FOR'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

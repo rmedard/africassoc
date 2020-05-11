@@ -1,16 +1,47 @@
 display:
   default:
+    display_title: Hoofd
     display_options:
       exposed_form:
         options:
           submit_button: Filter
           reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+      pager:
+        options:
+          tags:
+            previous: '‹ Vorige'
+            next: 'Volgende ›'
+          expose:
+            items_per_page_label: 'Items per pagina'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Startpunt
       fields:
         filename:
           label: Naam
+          separator: ', '
         filemime:
           label: MIME-type
+        filesize:
+          label: Grootte
       filters:
         filemime:
           expose:
             label: MIME-type
+  page_2:
+    display_options:
+      pager:
+        options:
+          tags:
+            previous: '‹ Vorige'
+            next: 'Volgende ›'
+          expose:
+            items_per_page_label: 'Items per pagina'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Startpunt
+      arguments:
+        fid:
+          exception:
+            title: Alle

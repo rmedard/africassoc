@@ -1,0 +1,23 @@
+uuid: 61600151-7b70-4755-abd3-ae893a8f59aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_association_social_media
+    - node.type.association
+  module:
+    - link
+id: node.association.field_association_social_media
+field_name: field_association_social_media
+entity_type: node
+bundle: association
+label: 'Social media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

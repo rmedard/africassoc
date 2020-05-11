@@ -1,0 +1,20 @@
+uuid: 60424460-69d3-40da-b45f-6b702a6b79c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_event_tarif
+field_name: field_event_tarif
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+uuid: c02b64ee-3076-4267-a0c8-6dc9b0f1f197
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_sounds
+    - media.type.audio
+    - node.type.event
+id: node.event.field_event_sounds
+field_name: field_event_sounds
+entity_type: node
+bundle: event
+label: Sounds
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 51abcba2-f55d-4fc4-8855-d4fe4b9a81d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_association_activities
+field_name: field_association_activities
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

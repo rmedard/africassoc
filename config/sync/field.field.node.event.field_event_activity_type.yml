@@ -1,0 +1,21 @@
+uuid: cfc75a2b-04c2-4fe2-aa51-d39d6acff32b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_activity_type
+    - node.type.event
+  module:
+    - options
+id: node.event.field_event_activity_type
+field_name: field_event_activity_type
+entity_type: node
+bundle: event
+label: 'Activity type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

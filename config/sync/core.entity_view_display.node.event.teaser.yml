@@ -1,0 +1,41 @@
+uuid: 29cf2329-2845-487c-8ffa-906c4ad655ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.field_event_activity_type
+    - field.field.node.event.field_event_address
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_how_know
+    - field.field.node.event.field_event_images
+    - field.field.node.event.field_event_payment_info
+    - field.field.node.event.field_event_reservation_info
+    - field.field.node.event.field_event_sounds
+    - field.field.node.event.field_event_tarif
+    - field.field.node.event.field_event_type
+    - node.type.event
+  module:
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_event_activity_type: true
+  field_event_address: true
+  field_event_date: true
+  field_event_how_know: true
+  field_event_images: true
+  field_event_payment_info: true
+  field_event_reservation_info: true
+  field_event_sounds: true
+  field_event_tarif: true
+  field_event_type: true
+  langcode: true

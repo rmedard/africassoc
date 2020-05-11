@@ -1,0 +1,21 @@
+uuid: 12c45823-b118-44c8-b31c-fbcb91aa8360
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_how_know
+    - node.type.event
+  module:
+    - options
+id: node.event.field_event_how_know
+field_name: field_event_how_know
+entity_type: node
+bundle: event
+label: 'How did you know about FORA?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

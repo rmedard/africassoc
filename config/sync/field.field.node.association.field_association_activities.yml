@@ -1,0 +1,19 @@
+uuid: 4015c80a-f94f-43ae-a00d-f6b5a4e86251
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_association_activities
+    - node.type.association
+id: node.association.field_association_activities
+field_name: field_association_activities
+entity_type: node
+bundle: association
+label: Activities
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

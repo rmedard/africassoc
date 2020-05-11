@@ -1,0 +1,21 @@
+uuid: fd6d1c7a-b50f-458b-ba28-046b6f831447
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_association_telephone
+    - node.type.association
+  module:
+    - telephone
+id: node.association.field_association_telephone
+field_name: field_association_telephone
+entity_type: node
+bundle: association
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

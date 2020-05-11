@@ -1,0 +1,19 @@
+uuid: 950959ad-b0ea-4465-b624-50f26f877248
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_association_address
+    - node.type.association
+id: node.association.field_association_address
+field_name: field_association_address
+entity_type: node
+bundle: association
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

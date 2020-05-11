@@ -1,0 +1,19 @@
+uuid: 0fe7f5a9-2c55-46c1-a048-d5d7b9422197
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_event_payment_info
+field_name: field_event_payment_info
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

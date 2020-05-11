@@ -1,0 +1,31 @@
+uuid: 75d84dc8-6c2d-46ad-878f-93a843dfedfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_association_member
+    - node.type.association
+id: node.association.field_association_member
+field_name: field_association_member
+entity_type: node
+bundle: association
+label: Member
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: role
+      role:
+        member: member
+        administrator: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

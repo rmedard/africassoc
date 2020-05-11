@@ -1,0 +1,23 @@
+uuid: 576f9198-28d6-4c47-8871-f9df142f1ae8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_tarif
+    - node.type.event
+id: node.event.field_event_tarif
+field_name: field_event_tarif
+entity_type: node
+bundle: event
+label: Tarif
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: €
+field_type: decimal

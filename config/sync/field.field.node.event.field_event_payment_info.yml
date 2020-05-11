@@ -1,0 +1,19 @@
+uuid: 14d047e4-393f-4114-9aee-6dcac9e29e10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_payment_info
+    - node.type.event
+id: node.event.field_event_payment_info
+field_name: field_event_payment_info
+entity_type: node
+bundle: event
+label: 'Payment Info'
+description: 'Payment information (details, links, etc)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

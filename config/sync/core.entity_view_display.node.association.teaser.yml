@@ -1,0 +1,47 @@
+uuid: fb5ed8ae-fe15-4472-b09f-47fe49515511
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.association.field_assoc_confirmation
+    - field.field.node.association.field_assoc_how_know
+    - field.field.node.association.field_association_activities
+    - field.field.node.association.field_association_address
+    - field.field.node.association.field_association_email
+    - field.field.node.association.field_association_logo
+    - field.field.node.association.field_association_member
+    - field.field.node.association.field_association_objectives
+    - field.field.node.association.field_association_poc
+    - field.field.node.association.field_association_social_media
+    - field.field.node.association.field_association_telephone
+    - field.field.node.association.field_association_website
+    - field.field.node.association.field_association_youtube_video
+    - node.type.association
+  module:
+    - user
+id: node.association.teaser
+targetEntityType: node
+bundle: association
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_assoc_confirmation: true
+  field_assoc_how_know: true
+  field_association_activities: true
+  field_association_address: true
+  field_association_email: true
+  field_association_logo: true
+  field_association_member: true
+  field_association_objectives: true
+  field_association_poc: true
+  field_association_social_media: true
+  field_association_telephone: true
+  field_association_website: true
+  field_association_youtube_video: true
+  langcode: true
