@@ -1,0 +1,22 @@
+uuid: f045099a-a682-4853-a439-0c758a55af3d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: associations_pattern
+label: 'Associations Pattern'
+type: 'canonical_entities:node'
+pattern: 'associations/[node:title]'
+selection_criteria:
+  1e2aaf67-bc62-4cce-9915-c66f49ae08df:
+    id: node_type
+    bundles:
+      association: association
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 1e2aaf67-bc62-4cce-9915-c66f49ae08df
+selection_logic: and
+weight: -5
+relationships: {  }

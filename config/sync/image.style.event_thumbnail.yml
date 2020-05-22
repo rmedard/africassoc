@@ -1,0 +1,15 @@
+uuid: 6a257f8b-26d8-4736-8737-43472b0399eb
+langcode: en
+status: true
+dependencies: {  }
+name: event_thumbnail
+label: 'Event Thumbnail 280x170'
+effects:
+  160d2ed0-5827-4b2e-b141-23ab7b5d5530:
+    uuid: 160d2ed0-5827-4b2e-b141-23ab7b5d5530
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 450
+      height: 250
+      anchor: center-center

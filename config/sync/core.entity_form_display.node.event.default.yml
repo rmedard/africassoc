@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.field_event_activity_type
     - field.field.node.event.field_event_address
     - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_description
     - field.field.node.event.field_event_how_know
     - field.field.node.event.field_event_images
     - field.field.node.event.field_event_payment_info
@@ -13,6 +14,7 @@ dependencies:
     - field.field.node.event.field_event_sounds
     - field.field.node.event.field_event_tarif
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_event_venue_name
     - image.style.thumbnail
     - node.type.event
   module:
@@ -21,6 +23,7 @@ dependencies:
     - image
     - media_library
     - path
+    - text
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -49,6 +52,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_event_description:
+    weight: 132
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_event_how_know:
     weight: 130
@@ -99,6 +110,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_event_venue_name:
+    weight: 133
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   langcode:
     type: language_select

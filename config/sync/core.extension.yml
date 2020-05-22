@@ -21,6 +21,7 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
+  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -29,9 +30,11 @@ module:
   filter: 0
   geolocation: 0
   geolocation_address: 0
+  geolocation_google_maps: 0
   help: 0
   history: 0
   image: 0
+  kint: 0
   language: 0
   link: 0
   locale: 0
@@ -56,8 +59,10 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  twig_tweak: 0
   update: 0
   user: 0
+  views_bootstrap: 0
   views_ui: 0
   menu_link_content: 1
   pathauto: 1

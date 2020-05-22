@@ -1,0 +1,15 @@
+uuid: bb7d5238-7e9d-4c90-83ea-2c9b4a708cb2
+langcode: en
+status: true
+dependencies: {  }
+name: assoc_logo_medium
+label: 'Assoc Logo Medium'
+effects:
+  264db9ac-625e-42e7-904c-f3410a1e5fa5:
+    uuid: 264db9ac-625e-42e7-904c-f3410a1e5fa5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      anchor: center-center

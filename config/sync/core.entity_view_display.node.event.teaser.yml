@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.field_event_activity_type
     - field.field.node.event.field_event_address
     - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_description
     - field.field.node.event.field_event_how_know
     - field.field.node.event.field_event_images
     - field.field.node.event.field_event_payment_info
@@ -14,28 +15,76 @@ dependencies:
     - field.field.node.event.field_event_sounds
     - field.field.node.event.field_event_tarif
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_event_venue_name
+    - image.style.event_thumbnail
     - node.type.event
   module:
+    - datetime_range
+    - image
+    - text
     - user
 id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
 content:
+  field_event_date:
+    type: daterange_default
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      timezone_override: Europe/Brussels
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+  field_event_description:
+    type: text_trimmed
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+  field_event_images:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: event_thumbnail
+      image_link: content
+    third_party_settings: {  }
+  field_event_tarif:
+    type: number_decimal
+    weight: 4
+    region: content
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_event_venue_name:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_event_activity_type: true
   field_event_address: true
-  field_event_date: true
   field_event_how_know: true
-  field_event_images: true
   field_event_payment_info: true
   field_event_reservation_info: true
   field_event_sounds: true
-  field_event_tarif: true
   field_event_type: true
   langcode: true
