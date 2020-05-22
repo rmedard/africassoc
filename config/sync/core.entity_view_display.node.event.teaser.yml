@@ -19,7 +19,7 @@ dependencies:
     - image.style.event_thumbnail
     - node.type.event
   module:
-    - datetime_range
+    - datetime
     - image
     - text
     - user
@@ -29,14 +29,13 @@ bundle: event
 mode: teaser
 content:
   field_event_date:
-    type: daterange_default
-    weight: 3
+    type: datetime_default
+    weight: 2
     region: content
     label: hidden
     settings:
       timezone_override: Europe/Brussels
       format_type: medium
-      separator: '-'
     third_party_settings: {  }
   field_event_description:
     type: text_trimmed
@@ -68,7 +67,7 @@ content:
     third_party_settings: {  }
   field_event_venue_name:
     type: string
-    weight: 2
+    weight: 3
     region: content
     label: hidden
     settings:

@@ -18,7 +18,7 @@ dependencies:
     - node.type.event
   module:
     - address
-    - datetime_range
+    - datetime
     - image
     - options
     - text
@@ -43,14 +43,13 @@ content:
     type: address_default
     region: content
   field_event_date:
-    weight: 111
+    weight: 114
     label: above
     settings:
-      separator: '-'
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
-    type: daterange_default
+    type: datetime_default
     region: content
   field_event_description:
     weight: 112

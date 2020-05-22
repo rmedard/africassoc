@@ -19,7 +19,7 @@ dependencies:
     - node.type.event
   module:
     - address
-    - datetime_range
+    - datetime
     - image
     - media_library
     - path
@@ -48,10 +48,10 @@ content:
     type: address_default
     region: content
   field_event_date:
-    weight: 131
+    weight: 134
     settings: {  }
     third_party_settings: {  }
-    type: daterange_default
+    type: datetime_default
     region: content
   field_event_description:
     weight: 132
