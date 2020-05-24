@@ -123,3 +123,9 @@ div.card {
 .sidebar .block {
   border: 1px solid $accent-shade;
 }
+
+form#views-exposed-form-events-card {
+  input {
+    margin-top: 0;
+  }
+}
