@@ -1,12 +1,22 @@
 global-styling:
   version: VERSION
-  js: 
+  js:
     js/popper.min.js: {}
     js/bootstrap.min.js: {}
     js/global.js: {}
+    js/custom.js: {}
   css:
     component:
       css/style.css: {}
   dependencies:
     - core/jquery
     - core/drupal
+
+bootstrap-datepicker:
+  version: 1.9.0
+  js:
+    js/bootstrap-datepicker.min.js: {minified: true}
+  css:
+    component:
+      css/bootstrap-datepicker.min.css: {minified: true}
+      css/bootstrap-datepicker.standalone.min.css: {minified: true}

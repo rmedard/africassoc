@@ -61,9 +61,12 @@
 #}
 {{ attach_library('bootstrap_barrio/node') }}
 
-<div class="card">
+<div{{ attributes.addClass('card') }}>
   {{ content.field_event_images[0] }}
-  <div class="card-body"><h4{{ title_attributes }}>{{ label }}</h4>{{ content.field_event_description }}</div>
+  <div class="card-body">
+    <h4{{ title_attributes }}>{{ label }}</h4>
+    {{ content.field_event_description }}
+  </div>
   <div class="card-footer text-center">
     {{ content.field_event_venue_name }}
     {{ content.field_event_date }}

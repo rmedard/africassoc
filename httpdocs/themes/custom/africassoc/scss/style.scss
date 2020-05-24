@@ -88,6 +88,38 @@ img.image-style-event-thumbnail {
   height: auto;
 }
 
-div.card-body {
-  padding: 1rem;
+.card-columns {
+  //@include media-breakpoint-only(xl) {
+  //  column-count: 5;
+  //}
+  //@include media-breakpoint-only(lg) {
+  //  column-count: 4;
+  //}
+  @include media-breakpoint-only(md) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(xs) {
+    column-count: 1;
+  }
+}
+
+div.card {
+  border: 1px solid $primary-shade;
+  div.card-body {
+    padding: 1rem;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  div.card-footer {
+    background-color: $primary-shade;
+    border-top: 1px solid $primary-shade;
+  }
+}
+
+.sidebar .block {
+  border: 1px solid $accent-shade;
 }
