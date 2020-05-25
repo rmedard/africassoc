@@ -1,0 +1,6 @@
+name: Africassoc Utils
+description: 'This is a utility module'
+package: Africassoc Custom Modules
+
+type: module
+core: 8.x

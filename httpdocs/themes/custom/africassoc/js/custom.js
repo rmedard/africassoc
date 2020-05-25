@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Custom utilities.
+ *
+ */
 (function ($, Drupal) {
   'use strict';
 

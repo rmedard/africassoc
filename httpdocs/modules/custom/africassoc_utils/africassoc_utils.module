@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_cron().
+ */
+function africassoc_utils_cron() {
+  Drupal::messenger()->addStatus("Afrissoc cron executed...");
+  $updateManager = \Drupal::entityDefinitionUpdateManager();
+  $entity_type = $updateManager->getEntityType('node');
+  if ($entity_type != null) {
+    $field_storage_definition = $updateManager->getFieldStorageDefinition('field_event_date', 'node');
+    if ($field_storage_definition != null) {
+      $updateManager->updateFieldStorageDefinition($field_storage_definition);
+    } else {
+      Drupal::messenger()->addError("Field storage was null...");
+    }
+  } else {
+    Drupal::messenger()->addError("Entity type was null...");
+  }
+}
