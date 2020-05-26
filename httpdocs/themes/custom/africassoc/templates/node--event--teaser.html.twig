@@ -61,7 +61,7 @@
 #}
 {{ attach_library('bootstrap_barrio/node') }}
 
-<div{{ attributes.addClass('card') }}>
+<div{{ attributes.addClass('card') }} onclick="location.href={{ url }};" style="cursor: pointer;">
   {{ content.field_event_images[0] }}
   <div class="card-body">
     <h4{{ title_attributes }}>{{ label }}</h4>
