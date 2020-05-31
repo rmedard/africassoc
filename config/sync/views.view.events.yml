@@ -623,7 +623,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: true
+          empty: false
           tokenize: false
           content:
             value: '<h3>Upcoming events</h3>'
