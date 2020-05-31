@@ -289,7 +289,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 200
+            max_length: 150
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -387,6 +387,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -401,7 +402,7 @@ display:
   page_member_associations:
     display_plugin: page
     id: page_member_associations
-    display_title: Page
+    display_title: 'Page Member Associations'
     position: 1
     display_options:
       display_extenders: {  }
@@ -415,6 +416,7 @@ display:
         weight: 2
         context: '0'
         menu_name: main
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

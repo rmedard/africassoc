@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.field_event_description
     - field.field.node.event.field_event_how_know
     - field.field.node.event.field_event_images
+    - field.field.node.event.field_event_organizer_assoc
     - field.field.node.event.field_event_payment_info
     - field.field.node.event.field_event_reservation_info
     - field.field.node.event.field_event_sounds
@@ -82,6 +83,7 @@ hidden:
   field_event_activity_type: true
   field_event_address: true
   field_event_how_know: true
+  field_event_organizer_assoc: true
   field_event_payment_info: true
   field_event_reservation_info: true
   field_event_sounds: true

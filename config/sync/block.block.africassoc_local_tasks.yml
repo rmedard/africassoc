@@ -9,7 +9,7 @@ _core:
 id: africassoc_local_tasks
 theme: africassoc
 region: content
-weight: -40
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

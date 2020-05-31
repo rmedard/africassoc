@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.event.field_event_description
     - field.field.node.event.field_event_how_know
     - field.field.node.event.field_event_images
+    - field.field.node.event.field_event_organizer_assoc
     - field.field.node.event.field_event_payment_info
     - field.field.node.event.field_event_reservation_info
     - field.field.node.event.field_event_sounds
@@ -74,6 +75,16 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_event_organizer_assoc:
+    weight: 135
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_event_payment_info:
     weight: 126

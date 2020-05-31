@@ -21,6 +21,7 @@ dependencies:
     - image
     - link
     - options
+    - telephone
     - user
 id: node.association.default
 targetEntityType: node
@@ -53,7 +54,7 @@ content:
     region: content
   field_association_address:
     weight: 104
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -61,14 +62,14 @@ content:
     region: content
   field_association_email:
     weight: 106
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_association_logo:
     weight: 101
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -77,7 +78,7 @@ content:
     region: content
   field_association_member:
     weight: 113
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -92,7 +93,7 @@ content:
     region: content
   field_association_poc:
     weight: 103
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -112,14 +113,15 @@ content:
     region: content
   field_association_telephone:
     weight: 105
-    label: above
-    settings: {  }
+    label: inline
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_association_website:
     weight: 107
-    label: above
+    label: inline
     settings:
       trim_length: 80
       url_only: false
@@ -140,8 +142,8 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true

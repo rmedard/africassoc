@@ -133,3 +133,23 @@ form#views-exposed-form-events-agenda {
 div#views-bootstrap-events-agenda > .row > div {
   margin-bottom: 1rem;
 }
+
+div.media {
+  padding: 0.5rem;
+  background: $primary-shade;
+  margin-bottom: 0.5rem;
+  div.media-body {
+    padding: 0.5rem;
+  }
+}
+
+div.view-view-member-associations {
+  div.view-content {
+    margin-top: 1rem;
+  }
+}
+
+div.field--name-field-association-logo > img {
+  width: 100%;
+  height: auto;
+}
