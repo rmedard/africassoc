@@ -6,6 +6,12 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Markup;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
+use Drupal\node\Entity\Node;
+use Drupal\views\Plugin\views\field\EntityField;
+use Drupal\views\ResultRow;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_form_system_theme_settings_alter() for settings form.
@@ -13,20 +19,44 @@ use Drupal\Core\Form\FormStateInterface;
  * Replace Barrio setting options with subtheme ones.
  */
 function africassoc_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
-  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
     'bg-primary' => t('Primary'),
     'bg-secondary' => t('Secondary'),
     'bg-light' => t('Light'),
     'bg-dark' => t('Dark'),
     'bg-white' => t('White'),
     'bg-transparent' => t('Transparent'),
-  );
-  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
+  ];
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
     'bg-primary' => t('Primary'),
     'bg-secondary' => t('Secondary'),
     'bg-light' => t('Light'),
     'bg-dark' => t('Dark'),
     'bg-white' => t('White'),
     'bg-transparent' => t('Transparent'),
-  );
+  ];
+}
+
+function africassoc_preprocess_views_view_field(&$variables) {
+  $field = $variables['field'];
+  $view = $variables['view'];
+  if ($field instanceof EntityField and $field->field == 'title') {
+    if ($view instanceof ViewExecutable and $view->current_display == 'page_member_associations') {
+      $row = $variables['row'];
+      if ($row instanceof ResultRow) {
+        $assoc = $row->_entity;
+        $query = Drupal::entityQuery('node');
+        $now = new DateTime('now', new DateTimeZone(date_default_timezone_get()));
+        $count = $query->condition('type', 'event')
+          ->condition('field_event_organizer_assoc.target_id', $assoc->id())
+          ->condition('status', Node::PUBLISHED)
+          ->condition('field_event_date', $now->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT), '>=')
+          ->count()->execute();
+        $upcomingEventsCount = intval($count) == 0 ? t('No upcoming events') : $count . ' ' . t('events');
+        $event_url = Drupal::service('path.alias_manager')
+          ->getAliasByPath('/' . $assoc->toUrl('canonical')->getInternalPath(), $assoc->language()->getId());
+        $variables['output'] = Markup::create('<h5><a href="'.$event_url.'" hreflang="'.$assoc->language()->getId().'">'.$assoc->label().'</a><small class="badge badge-pill badge-primary float-right">'.$upcomingEventsCount.'</small></h5>');
+      }
+    }
+  }
 }
