@@ -6,4 +6,6 @@ id: member
 label: Member
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create event content'
+  - 'edit own event content'

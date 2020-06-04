@@ -1,0 +1,12 @@
+label: 'Les Associations Membres'
+display:
+  default:
+    display_options:
+      title: 'Les Associations Membres'
+      header:
+        area:
+          content:
+            value: "<p>FR - Pour s’affilier au Forum des Associations Africaines, votre association va d’abord remplir un formulaire de demande d’adhésion. Chaque association membre jouit des droits et s’acquitte de certains devoirs. Concernant les droits, l’association membre bénéficie des services offerts par FORA selon les modalités à spécifier après la demande de soutien. Les devoirs sont énumérés dans les statuts et le règlement d’ordre intérieur.</p>\r\n\r\n<p><a class=\"btn btn-primary btn-sm\" href=\"/node/add/association\" role=\"button\"><i class=\"fas fa-user-plus\"></i> Devenez membre</a></p>\r\n"
+            format: full_html
+  page_member_associations:
+    display_title: 'Page des Associations Membres'

@@ -467,6 +467,8 @@ display:
                   is_secondary: false
       defaults:
         exposed_form: false
+        header: false
+      header: {  }
     cache_metadata:
       max-age: -1
       contexts:

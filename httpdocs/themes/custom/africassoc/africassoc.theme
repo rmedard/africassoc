@@ -67,3 +67,10 @@ function africassoc_preprocess_views_view_field(&$variables) {
     }
   }
 }
+
+function africassoc_preprocess_page_title(&$variables) {
+  if (Drupal::routeMatch()->getRouteName() == 'view.events.agenda') {
+    $buttonText = t('Display your event for free');
+    $variables['title']['#markup'] = Markup::create('<h1 class="js-quickedit-page-title title">Events <small class="float-right"><a href="#" class="btn btn-primary btn-sm" role="button"><i class="fas fa-plus-circle"></i> '. $buttonText .'</a></small></h1>');
+  }
+}

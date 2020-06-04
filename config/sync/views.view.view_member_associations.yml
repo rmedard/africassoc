@@ -386,7 +386,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: "<p>EN - Pour s’affilier au Forum des Associations Africaines, votre association va d’abord remplir un formulaire de demande d’adhésion. Chaque association membre jouit des droits et s’acquitte de certains devoirs. Concernant les droits, l’association membre bénéficie des services offerts par FORA selon les modalités à spécifier après la demande de soutien. Les devoirs sont énumérés dans les statuts et le règlement d’ordre intérieur.</p>\r\n<a href=\"/node/add/association\" class=\"btn btn-primary btn-sm\" role=\"button\">Become a member</a>"
+            value: "<p>EN - Pour s’affilier au Forum des Associations Africaines, votre association va d’abord remplir un formulaire de demande d’adhésion. Chaque association membre jouit des droits et s’acquitte de certains devoirs. Concernant les droits, l’association membre bénéficie des services offerts par FORA selon les modalités à spécifier après la demande de soutien. Les devoirs sont énumérés dans les statuts et le règlement d’ordre intérieur.</p>\r\n<a href=\"/node/add/association\" class=\"btn btn-primary btn-sm\" role=\"button\"><i class=\"fas fa-user-plus\"></i> Become a member</a>"
             format: full_html
           plugin_id: text
       footer: {  }
