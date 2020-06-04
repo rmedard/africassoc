@@ -7,6 +7,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Markup;
+use Drupal\Core\StringTranslation\PluralTranslatableMarkup;
 use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 use Drupal\node\Entity\Node;
 use Drupal\views\Plugin\views\field\EntityField;
@@ -45,17 +46,23 @@ function africassoc_preprocess_views_view_field(&$variables) {
       $row = $variables['row'];
       if ($row instanceof ResultRow) {
         $assoc = $row->_entity;
-        $query = Drupal::entityQuery('node');
-        $now = new DateTime('now', new DateTimeZone(date_default_timezone_get()));
-        $count = $query->condition('type', 'event')
-          ->condition('field_event_organizer_assoc.target_id', $assoc->id())
-          ->condition('status', Node::PUBLISHED)
-          ->condition('field_event_date', $now->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT), '>=')
-          ->count()->execute();
-        $upcomingEventsCount = intval($count) == 0 ? t('No upcoming events') : $count . ' ' . t('events');
-        $event_url = Drupal::service('path.alias_manager')
-          ->getAliasByPath('/' . $assoc->toUrl('canonical')->getInternalPath(), $assoc->language()->getId());
-        $variables['output'] = Markup::create('<h5><a href="'.$event_url.'" hreflang="'.$assoc->language()->getId().'">'.$assoc->label().'</a><small class="badge badge-pill badge-primary float-right">'.$upcomingEventsCount.'</small></h5>');
+        try {
+          $now = new DateTime('now', new DateTimeZone(date_default_timezone_get()));
+          $count = Drupal::entityQuery('node')->condition('type', 'event')
+            ->condition('field_event_organizer_assoc.target_id', $assoc->id())
+            ->condition('status', Node::PUBLISHED)
+            ->condition('field_event_date', $now->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT), '>=')
+            ->count()->execute();
+          $upcomingEventsCount = intval($count) == 0 ? t('No events') : $count . ' ' . new PluralTranslatableMarkup($count, 'event', 'events');
+          $assoc_url = Drupal::service('path.alias_manager')
+            ->getAliasByPath('/' . $assoc->toUrl('canonical')
+                ->getInternalPath(), $assoc->language()->getId());
+          $variables['output'] = Markup::create('<h5><a href="' . $assoc_url . '" hreflang="' . $assoc->language()
+              ->getId() . '">' . $assoc->label() . '</a><small class="badge badge-pill badge-primary float-right">' . $upcomingEventsCount . '</small></h5>');
+        } catch (Exception $e) {
+          Drupal::logger('Africassoc Theme')
+            ->error('Association ID: ' . $assoc->id() . ' | Error: ' . $e->getMessage());
+        }
       }
     }
   }
