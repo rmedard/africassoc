@@ -1,0 +1,15 @@
+uuid: 563b2769-04e5-4c93-b12b-0c3b54c030c7
+langcode: en
+status: true
+dependencies: {  }
+name: assoc_logo_small
+label: 'Assoc Logo Small'
+effects:
+  acff0e41-1d9f-4895-a2cf-2f8e71ea84ad:
+    uuid: acff0e41-1d9f-4895-a2cf-2f8e71ea84ad
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 35
+      height: 35
+      anchor: center-center

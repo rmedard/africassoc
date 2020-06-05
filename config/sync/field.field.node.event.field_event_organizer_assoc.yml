@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_event_organizer_assoc
-    - node.type.association
     - node.type.event
 id: node.event.field_event_organizer_assoc
 field_name: field_event_organizer_assoc
@@ -12,17 +11,15 @@ entity_type: node
 bundle: event
 label: 'Organizer Association'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: views
   handler_settings:
-    target_bundles:
-      association: association
-    sort:
-      field: _none
-    auto_create: false
-    auto_create_bundle: ''
+    view:
+      view_name: view_member_associations
+      display_name: entref_associations_by_member
+      arguments: {  }
 field_type: entity_reference

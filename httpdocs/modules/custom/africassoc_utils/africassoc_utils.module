@@ -3,18 +3,33 @@
 /**
  * Implements hook_cron().
  */
-function africassoc_utils_cron() {
-  Drupal::messenger()->addStatus("Afrissoc cron executed...");
-  $updateManager = \Drupal::entityDefinitionUpdateManager();
-  $entity_type = $updateManager->getEntityType('node');
-  if ($entity_type != null) {
-    $field_storage_definition = $updateManager->getFieldStorageDefinition('field_event_date', 'node');
-    if ($field_storage_definition != null) {
-      $updateManager->updateFieldStorageDefinition($field_storage_definition);
-    } else {
-      Drupal::messenger()->addError("Field storage was null...");
-    }
-  } else {
-    Drupal::messenger()->addError("Entity type was null...");
+//function africassoc_utils_cron() {
+//  Drupal::messenger()->addStatus("Afrissoc cron executed...");
+//  $updateManager = \Drupal::entityDefinitionUpdateManager();
+//  $entity_type = $updateManager->getEntityType('node');
+//  if ($entity_type != null) {
+//    $field_storage_definition = $updateManager->getFieldStorageDefinition('field_event_date', 'node');
+//    if ($field_storage_definition != null) {
+//      $updateManager->updateFieldStorageDefinition($field_storage_definition);
+//    } else {
+//      Drupal::messenger()->addError("Field storage was null...");
+//    }
+//  } else {
+//    Drupal::messenger()->addError("Entity type was null...");
+//  }
+//}
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_form_alter().
+ */
+function africassoc_utils_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_event_form') {
+    $form['field_event_member']['widget'][0]['target_id']['#default_value'] = User::load(Drupal::currentUser()->id());
+  }
+
+  if ($form_id == 'node_association_form') {
+    $form['field_association_member']['widget'][0]['target_id']['#default_value'] = User::load(Drupal::currentUser()->id());
   }
 }

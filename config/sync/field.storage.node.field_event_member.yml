@@ -1,4 +1,4 @@
-uuid: 2602b7a0-2c3a-45f5-b8fe-0b21939ac14f
+uuid: 44ff0d9c-f8e3-4610-a438-258940ca7607
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: custom
-id: node.field_association_member
-field_name: field_association_member
+id: node.field_event_member
+field_name: field_event_member
 entity_type: node
 type: entity_reference
 settings:

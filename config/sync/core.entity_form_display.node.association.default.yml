@@ -22,34 +22,27 @@ dependencies:
     - image
     - link
     - media_library
-    - path
     - telephone
 id: node.association.default
 targetEntityType: node
 bundle: association
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_assoc_confirmation:
-    weight: 137
+    weight: 13
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_assoc_how_know:
-    weight: 136
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_association_activities:
-    weight: 135
+    weight: 11
     settings:
       rows: 5
       placeholder: ''
@@ -57,7 +50,7 @@ content:
     type: string_textarea
     region: content
   field_association_address:
-    weight: 124
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -65,7 +58,7 @@ content:
     type: string_textfield
     region: content
   field_association_email:
-    weight: 126
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -73,7 +66,7 @@ content:
     type: email_default
     region: content
   field_association_logo:
-    weight: 121
+    weight: 1
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -81,7 +74,7 @@ content:
     type: image_image
     region: content
   field_association_member:
-    weight: 133
+    weight: 9
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -91,7 +84,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_association_objectives:
-    weight: 134
+    weight: 10
     settings:
       rows: 5
       placeholder: ''
@@ -99,7 +92,7 @@ content:
     type: string_textarea
     region: content
   field_association_poc:
-    weight: 123
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -107,7 +100,7 @@ content:
     type: string_textfield
     region: content
   field_association_social_media:
-    weight: 132
+    weight: 8
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -115,14 +108,14 @@ content:
     type: link_default
     region: content
   field_association_telephone:
-    weight: 125
+    weight: 4
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
     region: content
   field_association_website:
-    weight: 127
+    weight: 6
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -131,61 +124,36 @@ content:
     region: content
   field_association_youtube_video:
     type: media_library_widget
-    weight: 131
+    weight: 7
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 14
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  promote:
+  status:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 15
     region: content
     third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 120
-    region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 16
-    region: content
-    third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    region: content
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

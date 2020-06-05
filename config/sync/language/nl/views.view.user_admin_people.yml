@@ -36,6 +36,9 @@ display:
             group_items:
               1:
                 title: Actief
+        permission:
+          expose:
+            label: Toegangsrechten
   page_1:
     display_title: Pagina
     display_options:

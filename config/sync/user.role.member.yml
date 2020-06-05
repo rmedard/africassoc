@@ -7,5 +7,9 @@ label: Member
 weight: 3
 is_admin: null
 permissions:
+  - 'create association content'
   - 'create event content'
+  - 'edit own association content'
   - 'edit own event content'
+  - 'view field_event_member'
+  - 'view own field_event_member'

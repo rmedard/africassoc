@@ -1,0 +1,28 @@
+uuid: ba7fe091-69e4-4369-9117-e01531888c02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_member
+    - node.type.event
+id: node.event.field_event_member
+field_name: field_event_member
+entity_type: node
+bundle: event
+label: Member
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

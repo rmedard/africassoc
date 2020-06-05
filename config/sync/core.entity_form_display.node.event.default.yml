@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.event.field_event_description
     - field.field.node.event.field_event_how_know
     - field.field.node.event.field_event_images
+    - field.field.node.event.field_event_member
     - field.field.node.event.field_event_organizer_assoc
     - field.field.node.event.field_event_payment_info
     - field.field.node.event.field_event_reservation_info
@@ -32,30 +33,30 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_event_activity_type:
-    weight: 123
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_event_address:
-    weight: 124
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_event_date:
-    weight: 134
+    weight: 20
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_event_description:
-    weight: 132
+    weight: 18
     settings:
       rows: 5
       placeholder: ''
@@ -63,21 +64,21 @@ content:
     type: text_textarea
     region: content
   field_event_how_know:
-    weight: 130
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_event_images:
-    weight: 128
+    weight: 15
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
-  field_event_organizer_assoc:
-    weight: 135
+  field_event_member:
+    weight: 21
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -86,8 +87,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_event_organizer_assoc:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_event_payment_info:
-    weight: 126
+    weight: 13
     settings:
       rows: 5
       placeholder: ''
@@ -95,7 +102,7 @@ content:
     type: string_textarea
     region: content
   field_event_reservation_info:
-    weight: 127
+    weight: 14
     settings:
       rows: 5
       placeholder: ''
@@ -104,26 +111,26 @@ content:
     region: content
   field_event_sounds:
     type: media_library_widget
-    weight: 129
+    weight: 16
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_event_tarif:
-    weight: 125
+    weight: 12
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_event_type:
-    weight: 122
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_event_venue_name:
-    weight: 133
+    weight: 19
     settings:
       size: 60
       placeholder: ''
@@ -132,14 +139,14 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -147,39 +154,39 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 5
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 8
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60

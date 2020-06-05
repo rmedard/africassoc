@@ -5,6 +5,7 @@
  * Functions to support theming in the SASS Starterkit subtheme.
  */
 
+use Drupal\Core\Asset\AttachedAssetsInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\StringTranslation\PluralTranslatableMarkup;
@@ -71,6 +72,13 @@ function africassoc_preprocess_views_view_field(&$variables) {
 function africassoc_preprocess_page_title(&$variables) {
   if (Drupal::routeMatch()->getRouteName() == 'view.events.agenda') {
     $buttonText = t('Display your event for free');
-    $variables['title']['#markup'] = Markup::create('<h1 class="js-quickedit-page-title title">Events <small class="float-right"><a href="#" class="btn btn-primary btn-sm" role="button"><i class="fas fa-plus-circle"></i> '. $buttonText .'</a></small></h1>');
+    $variables['title']['#markup'] = Markup::create('<h1 class="js-quickedit-page-title title">Events <small class="float-right"><a href="/node/add/event" class="btn btn-primary btn-sm" role="button"><i class="fas fa-plus-circle"></i> '. $buttonText .'</a></small></h1>');
   }
+}
+
+/**
+ * Implements hook_js_alter().
+ */
+function africassoc_js_alter(&$javascript, AttachedAssetsInterface $assets) {
+  unset($javascript['core/misc/tabledrag.js']);
 }

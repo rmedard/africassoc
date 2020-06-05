@@ -17,4 +17,8 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view field_association_member'
+  - 'view field_event_member'
   - 'view media'
+  - 'view own field_association_member'
+  - 'view own field_event_member'
