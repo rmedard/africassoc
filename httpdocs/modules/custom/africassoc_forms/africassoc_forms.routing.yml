@@ -1,0 +1,7 @@
+africassoc_forms.register_form:
+  path: '/event-creator-register-form'
+  defaults:
+    _title: 'Registration form'
+    _form: 'Drupal\africassoc_forms\Form\MemberRegisterForm'
+  requirements:
+    _permission: 'access content'

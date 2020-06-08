@@ -1,0 +1,6 @@
+services:
+  africassoc_forms.event_subscriber:
+    class: Drupal\africassoc_forms\EventSubscriber\RedirectAnonymousSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }

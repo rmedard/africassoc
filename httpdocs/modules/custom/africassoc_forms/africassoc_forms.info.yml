@@ -1,5 +1,5 @@
-name: Africassoc Utils
-description: 'This is a utility module'
+name: Africassoc Forms
+description: 'This is a custom module to manage Africassoc forms'
 package: Africassoc Custom Modules
 
 type: module
