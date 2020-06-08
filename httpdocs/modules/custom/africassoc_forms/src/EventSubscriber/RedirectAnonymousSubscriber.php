@@ -4,6 +4,7 @@ namespace Drupal\africassoc_forms\EventSubscriber;
 
 
 use Drupal;
+use Drupal\Core\Url;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -27,9 +28,9 @@ class RedirectAnonymousSubscriber implements EventSubscriberInterface {
   public function checkAuthStatus() {
     if ($this->account->isAnonymous() && Drupal::service('path.current')
         ->getPath() == '/node/add/event') {
-      Drupal::messenger()->addStatus('User Id: ' . $this->account->id());
       $response = new RedirectResponse('/event-creator-register-form', 302);
       $response->send();
+      Drupal::messenger()->addWarning(t('Please sign up'));
     }
   }
 

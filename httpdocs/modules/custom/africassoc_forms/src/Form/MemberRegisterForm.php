@@ -24,6 +24,10 @@ class MemberRegisterForm extends FormBase {
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $form['help'] = [
+      '#type' => 'markup',
+      '#markup' => $this->t('Already has an account? <a href="@login-page">Please login.</a>', ['@login-page' => Url::fromRoute('user.login')->getInternalPath()])
+    ];
     $form['member_email'] = [
       '#type' => 'email',
       '#title' => 'Your Email',
