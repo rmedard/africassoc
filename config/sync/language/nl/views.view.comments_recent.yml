@@ -1,3 +1,5 @@
 display:
   default:
     display_title: Hoofd
+  block_1:
+    display_title: Blok

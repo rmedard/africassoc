@@ -1,0 +1,21 @@
+uuid: 7a1b6893-9139-42e1-b4d6-ff16ef1484a9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wUmchtQ3Bj3srSvNnA9Ey2UBgRpUvuDDN1FLH44VH4c
+name: 'Fora Global Newsletter'
+id: default
+description: 'This Fora global newsletter'
+format: html
+priority: 3
+receipt: true
+from_name: 'Forum Of African Associations'
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: info@africanassociations.com
+hyperlinks: false
+allowed_handlers:
+  simplenews_all: '0'
+new_account: 'on'
+opt_inout: single
+weight: 0

@@ -1,0 +1,24 @@
+uuid: 973355d2-0c8e-4233-9835-d06c1942c53b
+langcode: en
+status: true
+dependencies:
+  module:
+    - simplenews
+  theme:
+    - africassoc
+id: simplenews_subscription
+theme: africassoc
+region: sidebar_first
+weight: -6
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'Simplenews subscription'
+  provider: simplenews
+  label_display: '0'
+  newsletters:
+    default: default
+  message: 'Stay informed - subscribe to our newsletter.'
+  unique_id: ed9c5d00-269c-4693-ac84-bd2d5857d5a9
+visibility: {  }

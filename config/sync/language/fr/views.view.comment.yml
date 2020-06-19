@@ -11,12 +11,18 @@ display:
           sort_desc_label: Desc
       pager:
         options:
+          tags:
+            previous: "‹\_précédent"
+            next: "suivant\_›"
+            first: "«\_premier"
+            last: "dernier\_»"
           expose:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
       fields:
         subject:
+          label: Objet
           separator: ', '
         uid:
           separator: ', '
@@ -26,23 +32,31 @@ display:
         entity_id:
           separator: ', '
         changed:
+          label: 'Mis à jour'
           separator: ', '
         operations:
           label: Actions
         name_1:
           separator: ', '
       filters:
+        subject:
+          expose:
+            label: Objet
         langcode:
           expose:
             label: Langue
   page_unapproved:
     display_options:
       filters:
+        subject:
+          expose:
+            label: Objet
         langcode:
           expose:
             label: Langue
       fields:
         subject:
+          label: Objet
           separator: ', '
         uid:
           separator: ', '
@@ -52,6 +66,7 @@ display:
         entity_id:
           separator: ', '
         changed:
+          label: 'Mis à jour'
           separator: ', '
         operations:
           label: Actions

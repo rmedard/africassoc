@@ -14,10 +14,13 @@ display:
             items_per_page_label: 'Items per pagina'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Startpunt
-          tags:
-            previous: ‹‹
-            next: ››
       filters:
+        status:
+          group_info:
+            label: Gepubliceerd
+            group_items:
+              1:
+                title: Gepubliceerd
         name:
           expose:
             label: Naam
@@ -30,6 +33,10 @@ display:
       fields:
         name:
           separator: ', '
+        edit_media:
+          text: Bewerken
+        delete_media:
+          text: Verwijderen
   widget:
     display_options:
       filters:
@@ -47,6 +54,8 @@ display:
           label: Naam
         uid:
           label: Auteur
+        changed:
+          label: Bijgewerkt
       filters:
         name:
           expose:

@@ -24,6 +24,12 @@ display:
           separator: ', '
         name:
           label: Auteur
+        status:
+          label: État
+          settings:
+            format_custom_true: Publié
+        changed:
+          label: 'Mis à jour'
         operations:
           label: Actions
       filters:
@@ -33,6 +39,13 @@ display:
         type:
           expose:
             label: 'Type de contenu'
+        status:
+          expose:
+            label: État
+          group_info:
+            group_items:
+              1:
+                title: Publié
         langcode:
           expose:
             label: Langue

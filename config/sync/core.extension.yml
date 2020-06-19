@@ -56,6 +56,7 @@ module:
   search: 0
   serialization: 0
   shortcut: 0
+  simplenews: 0
   system: 0
   taxonomy: 0
   telephone: 0

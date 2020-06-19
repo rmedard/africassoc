@@ -23,6 +23,8 @@ display:
           separator: ', '
         type:
           separator: ', '
+        changed:
+          label: 'Mis à jour'
         operations:
           label: Actions
   page_1:

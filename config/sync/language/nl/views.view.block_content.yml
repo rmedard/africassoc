@@ -23,6 +23,8 @@ display:
           separator: ', '
         type:
           separator: ', '
+        changed:
+          label: Bijgewerkt
         operations:
           label: Bewerkingen
   page_1:

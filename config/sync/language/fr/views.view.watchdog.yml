@@ -16,18 +16,11 @@ display:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
-          tags:
-            previous: ‹‹
-            next: ››
       fields:
         nothing:
           admin_label: Icône
         severity:
           label: Importance
-        type:
-          label: Type
-        timestamp:
-          label: Date
         message:
           label: Message
         name:
@@ -36,9 +29,6 @@ display:
         link:
           label: Actions
       filters:
-        type:
-          expose:
-            label: Type
         severity:
           expose:
             label: Importance

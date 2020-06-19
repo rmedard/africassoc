@@ -11,12 +11,18 @@ display:
           sort_desc_label: Aflopend
       pager:
         options:
+          tags:
+            previous: '‹ vorige'
+            next: 'volgende ›'
+            first: '« eerste'
+            last: 'laatste »'
           expose:
             items_per_page_label: 'Items per pagina'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Startpunt
       fields:
         subject:
+          label: Onderwerp
           separator: ', '
         uid:
           separator: ', '
@@ -26,23 +32,31 @@ display:
         entity_id:
           separator: ', '
         changed:
+          label: Bijgewerkt
           separator: ', '
         operations:
           label: Bewerkingen
         name_1:
           separator: ', '
       filters:
+        subject:
+          expose:
+            label: Onderwerp
         langcode:
           expose:
             label: Taal
   page_unapproved:
     display_options:
       filters:
+        subject:
+          expose:
+            label: Onderwerp
         langcode:
           expose:
             label: Taal
       fields:
         subject:
+          label: Onderwerp
           separator: ', '
         uid:
           separator: ', '
@@ -52,6 +66,7 @@ display:
         entity_id:
           separator: ', '
         changed:
+          label: Bijgewerkt
           separator: ', '
         operations:
           label: Bewerkingen

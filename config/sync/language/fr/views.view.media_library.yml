@@ -14,10 +14,13 @@ display:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
-          tags:
-            previous: ‹‹
-            next: ››
       filters:
+        status:
+          group_info:
+            label: Publié
+            group_items:
+              1:
+                title: Publié
         name:
           expose:
             label: Nom
@@ -30,6 +33,10 @@ display:
       fields:
         name:
           separator: ', '
+        edit_media:
+          text: Modifier
+        delete_media:
+          text: Supprimer
   widget:
     display_options:
       filters:
@@ -47,6 +54,8 @@ display:
           label: Nom
         uid:
           label: Auteur
+        changed:
+          label: 'Mis à jour'
       filters:
         name:
           expose:

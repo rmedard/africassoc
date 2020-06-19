@@ -5,7 +5,6 @@ display:
     display_options:
       exposed_form:
         options:
-          submit_button: Filter
           reset_button_label: Reset
           exposed_sorts_label: 'Sorteren op'
           sort_asc_label: Oplopend
@@ -16,16 +15,11 @@ display:
             items_per_page_label: 'Items per pagina'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Startpunt
-          tags:
-            previous: ‹‹
-            next: ››
       fields:
         nothing:
           admin_label: Pictogram
         severity:
           label: Ernst
-        type:
-          label: Type
         timestamp:
           label: Datum
         message:
@@ -36,9 +30,6 @@ display:
         link:
           label: Bewerkingen
       filters:
-        type:
-          expose:
-            label: Type
         severity:
           expose:
             label: Ernst

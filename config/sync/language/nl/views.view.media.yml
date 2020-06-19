@@ -4,7 +4,6 @@ display:
     display_options:
       exposed_form:
         options:
-          submit_button: Filter
           reset_button_label: Reset
           exposed_sorts_label: 'Sorteren op'
           sort_asc_label: Oplopend
@@ -26,21 +25,26 @@ display:
         name:
           separator: ', '
         bundle:
-          label: Type
           separator: ', '
         uid:
           label: Auteur
           separator: ', '
         status:
+          label: Status
+          settings:
+            format_custom_true: Gepubliceerd
           separator: ', '
         changed:
+          label: Bijgewerkt
           separator: ', '
         operations:
           label: Bewerkingen
       filters:
-        bundle:
-          expose:
-            label: Type
+        status:
+          group_info:
+            group_items:
+              1:
+                title: Gepubliceerd
         langcode:
           expose:
             label: Taal

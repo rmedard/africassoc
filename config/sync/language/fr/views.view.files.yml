@@ -26,12 +26,17 @@ display:
           label: 'Type MIME'
         filesize:
           label: Taille
+        status:
+          label: État
         count:
           label: 'Utilisé dans'
       filters:
         filemime:
           expose:
             label: 'Type MIME'
+        status:
+          expose:
+            label: État
   page_2:
     display_options:
       pager:
