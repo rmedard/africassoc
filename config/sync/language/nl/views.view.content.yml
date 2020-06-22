@@ -4,7 +4,6 @@ display:
     display_options:
       exposed_form:
         options:
-          reset_button_label: Reset
           exposed_sorts_label: 'Sorteren op'
           sort_asc_label: Oplopend
           sort_desc_label: Aflopend
@@ -20,11 +19,9 @@ display:
           label: Titel
         type:
           label: Inhoudstype
-          separator: ', '
         name:
           label: Auteur
         status:
-          label: Status
           settings:
             format_custom_true: Gepubliceerd
         changed:
@@ -39,8 +36,6 @@ display:
           expose:
             label: Inhoudstype
         status:
-          expose:
-            label: Status
           group_info:
             group_items:
               1:

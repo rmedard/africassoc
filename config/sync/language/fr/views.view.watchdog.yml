@@ -8,8 +8,6 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           expose:
@@ -21,11 +19,8 @@ display:
           admin_label: Icône
         severity:
           label: Importance
-        message:
-          label: Message
         name:
           label: Utilisateur
-          separator: ', '
         link:
           label: Actions
       filters:
@@ -37,5 +32,3 @@ display:
         area:
           admin_label: 'Aucune entrée du journal n''est disponible.'
           content: 'Aucune entrée du journal n''est disponible.'
-  page:
-    display_title: Page

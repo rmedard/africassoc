@@ -4,7 +4,6 @@ display:
     display_options:
       exposed_form:
         options:
-          reset_button_label: Reset
           exposed_sorts_label: 'Sorteren op'
           sort_asc_label: Oplopend
           sort_desc_label: Aflopend
@@ -20,23 +19,13 @@ display:
             first: '« Eerste'
             last: 'Laatste »'
       fields:
-        thumbnail__target_id:
-          separator: ', '
-        name:
-          separator: ', '
-        bundle:
-          separator: ', '
         uid:
           label: Auteur
-          separator: ', '
         status:
-          label: Status
           settings:
             format_custom_true: Gepubliceerd
-          separator: ', '
         changed:
           label: Bijgewerkt
-          separator: ', '
         operations:
           label: Bewerkingen
       filters:

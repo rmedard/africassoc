@@ -4,7 +4,6 @@ display:
     display_options:
       exposed_form:
         options:
-          reset_button_label: Reset
           exposed_sorts_label: 'Sorteren op'
           sort_asc_label: Oplopend
           sort_desc_label: Aflopend
@@ -20,22 +19,16 @@ display:
       fields:
         filename:
           label: Naam
-          separator: ', '
         filemime:
           label: MIME-type
         filesize:
           label: Grootte
-        status:
-          label: Status
         count:
           label: 'Gebruikt in'
       filters:
         filemime:
           expose:
             label: MIME-type
-        status:
-          expose:
-            label: Status
   page_2:
     display_options:
       pager:

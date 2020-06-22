@@ -8,8 +8,6 @@ display:
           submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           tags:
@@ -28,7 +26,6 @@ display:
           label: 'Nom d''utilisateur'
         subscriptions_target_id:
           label: Abonnements
-          separator: ', '
         status:
           label: Actif
         created:
@@ -49,5 +46,3 @@ display:
           expose:
             label: État
       title: Abonnés
-  page_1:
-    display_title: Page

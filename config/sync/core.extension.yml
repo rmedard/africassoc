@@ -18,7 +18,6 @@ module:
   config: 0
   config_translation: 0
   contact: 0
-  content_sync: 0
   contextual: 0
   ctools: 0
   datetime: 0
@@ -38,7 +37,6 @@ module:
   help: 0
   history: 0
   image: 0
-  kint: 0
   language: 0
   link: 0
   locale: 0
@@ -81,6 +79,7 @@ theme:
   seven: 0
   bootstrap_barrio: 0
   africassoc: 0
+  claro: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

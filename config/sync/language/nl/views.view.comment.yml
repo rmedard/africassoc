@@ -5,7 +5,6 @@ display:
       exposed_form:
         options:
           submit_button: Toepassen
-          reset_button_label: Reset
           exposed_sorts_label: 'Sorteren op'
           sort_asc_label: Oplopend
           sort_desc_label: Aflopend
@@ -23,21 +22,12 @@ display:
       fields:
         subject:
           label: Onderwerp
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Auteur
-          separator: ', '
-        entity_id:
-          separator: ', '
         changed:
           label: Bijgewerkt
-          separator: ', '
         operations:
           label: Bewerkingen
-        name_1:
-          separator: ', '
       filters:
         subject:
           expose:
@@ -57,18 +47,9 @@ display:
       fields:
         subject:
           label: Onderwerp
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Auteur
-          separator: ', '
-        entity_id:
-          separator: ', '
         changed:
           label: Bijgewerkt
-          separator: ', '
         operations:
           label: Bewerkingen
-        name_1:
-          separator: ', '
