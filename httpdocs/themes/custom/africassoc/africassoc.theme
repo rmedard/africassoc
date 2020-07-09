@@ -55,7 +55,7 @@ function africassoc_preprocess_views_view_field(&$variables) {
             ->condition('field_event_date', $now->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT), '>=')
             ->count()->execute();
           $upcomingEventsCount = intval($count) == 0 ? t('No events') : $count . ' ' . new PluralTranslatableMarkup($count, 'event', 'events');
-          $assoc_url = Drupal::service('path.alias_manager')
+          $assoc_url = Drupal::service('path_alias.manager')
             ->getAliasByPath('/' . $assoc->toUrl('canonical')
                 ->getInternalPath(), $assoc->language()->getId());
           $variables['output'] = Markup::create('<h5><a href="' . $assoc_url . '" hreflang="' . $assoc->language()
