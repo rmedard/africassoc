@@ -15,7 +15,7 @@ function africassoc_utils_views_query_alter(ViewExecutable $view, QueryPluginBas
   if ($view->id() == 'events' and $view->current_display == 'agenda'
     and !empty($view->exposed_raw_input['field_event_date_value'])) {
 
-    $local_input_date = DateTime::createFromFormat('m/d/Y', $view->exposed_raw_input['field_event_date_value']);
+    $local_input_date = DateTime::createFromFormat('d/m/Y', $view->exposed_raw_input['field_event_date_value']);
     if ($local_input_date !== FALSE) {
       $local_from_date = $local_input_date->setTime(0, 0, 0)
         ->format('Y-m-d H:i:s');
