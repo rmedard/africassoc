@@ -12,7 +12,6 @@ gen
 # Ignore drupal core (if not versioning drupal sources)
 /vendor
 /drush
-/.ddev
 /.csslintrc
 /.editorconfig
 /.eslintignore
@@ -22,3 +21,15 @@ gen
 /.htaccess
 /error_docs
 /logs
+
+/.env
+/mariadb-init
+/tests
+.travis.yml
+LICENSE.md
+Makefile
+README.md
+docker-compose.yml
+docker-sync.yml
+docker.mk
+traefik.yml

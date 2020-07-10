@@ -32,7 +32,8 @@
         "drupal/simplenews": "^2.0@beta",
         "drupal/twig_tweak": "^2.6",
         "drupal/views_bootstrap": "^4.2",
-        "drush/drush": "^10.2"
+        "drush/drush": "^10.2",
+        "kint-php/kint": "^3.3"
     },
     "conflict": {
         "drupal/drupal": "*"

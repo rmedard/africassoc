@@ -1,4 +1,5 @@
 label: Contenu
+description: 'Trouver et gérer le contenu.'
 display:
   default:
     display_options:
@@ -7,6 +8,8 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       pager:
         options:
           tags:
@@ -19,12 +22,14 @@ display:
           label: Titre
         type:
           label: 'Type de contenu'
+          separator: ', '
         name:
           label: Auteur
         status:
           label: État
           settings:
             format_custom_true: Publié
+            format_custom_false: 'Non publié'
         changed:
           label: 'Mis à jour'
         operations:
@@ -40,13 +45,19 @@ display:
           expose:
             label: État
           group_info:
+            label: 'Statut de publication'
             group_items:
               1:
                 title: Publié
+              2:
+                title: 'Non publié'
         langcode:
           expose:
             label: Langue
       title: Contenu
+      empty:
+        area_text_custom:
+          content: 'Aucun contenu disponible.'
     display_title: Maître
   page_1:
     display_options:
@@ -54,3 +65,5 @@ display:
         title: Contenu
       tab_options:
         title: Contenu
+        description: 'Trouver et gérer le contenu'
+    display_title: Page

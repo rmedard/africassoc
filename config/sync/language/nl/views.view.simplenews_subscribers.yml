@@ -6,6 +6,7 @@ display:
       exposed_form:
         options:
           submit_button: Toepassen
+          reset_button_label: Reset
           exposed_sorts_label: 'Sorteren op'
           sort_asc_label: Oplopend
           sort_desc_label: Aflopend
@@ -27,6 +28,7 @@ display:
           label: Gebruikersnaam
         subscriptions_target_id:
           label: Abonnementen
+          separator: ', '
         status:
           label: Actief
         created:
@@ -43,6 +45,9 @@ display:
         status:
           expose:
             label: Actief
+        subscriptions_status:
+          expose:
+            label: Status
       title: Abonnees
   page_1:
     display_title: Pagina

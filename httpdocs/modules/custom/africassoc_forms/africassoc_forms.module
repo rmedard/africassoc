@@ -1,2 +1,21 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\Plugin\views\HandlerBase;
+
+/**
+ * Implements hook_better_exposed_filters_filter_widgets_alter().
+ */
+function africassoc_forms_better_exposed_filters_filter_widgets_alter(array &$widgets, HandlerBase $filter) {
+  kint([$widgets, $filter]);
+//  die();
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function africassoc_forms_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] === 'views-exposed-form-events-agenda') {
+    kint([$form, $form_state, $form_id, $form['#id']]);
+  }
+}
