@@ -294,6 +294,7 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+          group: 1
         field_event_date_value:
           id: field_event_date_value
           table: node__field_event_date
@@ -408,6 +409,10 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:

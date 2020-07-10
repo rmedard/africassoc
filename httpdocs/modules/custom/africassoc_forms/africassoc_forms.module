@@ -1,21 +1,20 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\views\Plugin\views\HandlerBase;
+use Drupal\user\Entity\User;
+
 
 /**
- * Implements hook_better_exposed_filters_filter_widgets_alter().
+ * Implements hook_form_alter().
  */
-function africassoc_forms_better_exposed_filters_filter_widgets_alter(array &$widgets, HandlerBase $filter) {
-  kint([$widgets, $filter]);
-//  die();
-}
+function africassoc_forms_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_event_form') {
+    $form['field_event_member']['widget'][0]['target_id']['#default_value'] = User::load(Drupal::currentUser()
+      ->id());
+  }
 
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function africassoc_forms_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if ($form['#id'] === 'views-exposed-form-events-agenda') {
-    kint([$form, $form_state, $form_id, $form['#id']]);
+  if ($form_id == 'node_association_form') {
+    $form['field_association_member']['widget'][0]['target_id']['#default_value'] = User::load(Drupal::currentUser()
+      ->id());
   }
 }

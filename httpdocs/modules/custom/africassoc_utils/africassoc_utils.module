@@ -1,35 +1,51 @@
 <?php
 
-/**
- * Implements hook_cron().
- */
-//function africassoc_utils_cron() {
-//  Drupal::messenger()->addStatus("Afrissoc cron executed...");
-//  $updateManager = \Drupal::entityDefinitionUpdateManager();
-//  $entity_type = $updateManager->getEntityType('node');
-//  if ($entity_type != null) {
-//    $field_storage_definition = $updateManager->getFieldStorageDefinition('field_event_date', 'node');
-//    if ($field_storage_definition != null) {
-//      $updateManager->updateFieldStorageDefinition($field_storage_definition);
-//    } else {
-//      Drupal::messenger()->addError("Field storage was null...");
-//    }
-//  } else {
-//    Drupal::messenger()->addError("Entity type was null...");
-//  }
-//}
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\user\Entity\User;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\Plugin\views\query\Sql;
+use Drupal\views\ViewExecutable;
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_views_query_alter().
+ *
+ * @throws \Exception
  */
-function africassoc_utils_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if ($form_id == 'node_event_form') {
-    $form['field_event_member']['widget'][0]['target_id']['#default_value'] = User::load(Drupal::currentUser()->id());
-  }
+function africassoc_utils_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() == 'events' and $view->current_display == 'agenda'
+    and !empty($view->exposed_raw_input['field_event_date_value'])) {
 
-  if ($form_id == 'node_association_form') {
-    $form['field_association_member']['widget'][0]['target_id']['#default_value'] = User::load(Drupal::currentUser()->id());
+    $local_input_date = DateTime::createFromFormat('m/d/Y', $view->exposed_raw_input['field_event_date_value']);
+    if ($local_input_date !== FALSE) {
+      $local_from_date = $local_input_date->setTime(0, 0, 0)
+        ->format('Y-m-d H:i:s');
+      $local_to_date = $local_input_date->setTime(23, 59, 59)
+        ->format('Y-m-d H:i:s');
+      if ($query instanceof Sql) {
+        foreach ($query->where as &$condition_group) {
+          foreach ($condition_group['conditions'] as &$condition) {
+            if (stristr($condition['field'], 'field_event_date_value')) {
+              $brussels_timezone = new DateTimeZone('Europe/Brussels');
+              $from = (new DrupalDateTime($local_from_date, $brussels_timezone))
+                ->setTimezone(new DateTimeZone('UTC'))
+                ->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT);
+              $to = (new DrupalDateTime($local_to_date, $brussels_timezone))
+                ->setTimezone(new DateTimeZone('UTC'))
+                ->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT);
+
+              $condition['field'] = 'node__field_event_date.field_event_date_value';
+              $condition['value'] = [$from, $to];
+              $condition['operator'] = 'BETWEEN';
+            }
+          }
+        }
+      }
+    }
+    else {
+      Drupal::logger('africassoc_utils')
+        ->error('Invalid event date format: "{value}"', [
+          'value' => $view->exposed_raw_input['field_event_date_value'],
+        ]);
+    }
   }
 }

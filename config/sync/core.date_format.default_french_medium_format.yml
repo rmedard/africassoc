@@ -1,0 +1,8 @@
+uuid: 444aa0ce-1f2d-4890-bb81-462d6f83d71b
+langcode: en
+status: true
+dependencies: {  }
+id: default_french_medium_format
+label: 'Default French Medium Date'
+locked: false
+pattern: 'D, d/m/Y - H:i'

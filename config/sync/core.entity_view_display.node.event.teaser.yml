@@ -37,7 +37,7 @@ content:
     label: hidden
     settings:
       timezone_override: Europe/Brussels
-      format_type: medium
+      format_type: default_french_medium_format
     third_party_settings: {  }
   field_event_description:
     type: text_trimmed
