@@ -23,6 +23,7 @@ dependencies:
   module:
     - datetime
     - image
+    - options
     - text
     - user
 id: node.event.teaser
@@ -32,7 +33,7 @@ mode: teaser
 content:
   field_event_date:
     type: datetime_default
-    weight: 2
+    weight: 3
     region: content
     label: hidden
     settings:
@@ -41,7 +42,7 @@ content:
     third_party_settings: {  }
   field_event_description:
     type: text_trimmed
-    weight: 1
+    weight: 2
     region: content
     label: hidden
     settings:
@@ -58,7 +59,7 @@ content:
     third_party_settings: {  }
   field_event_tarif:
     type: number_decimal
-    weight: 4
+    weight: 5
     region: content
     label: inline
     settings:
@@ -67,16 +68,23 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
+  field_event_type:
+    type: list_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_event_venue_name:
     type: string
-    weight: 3
+    weight: 4
     region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
   links:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -89,5 +97,4 @@ hidden:
   field_event_payment_info: true
   field_event_reservation_info: true
   field_event_sounds: true
-  field_event_type: true
   langcode: true
