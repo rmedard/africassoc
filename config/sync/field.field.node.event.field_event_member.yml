@@ -9,7 +9,7 @@ id: node.event.field_event_member
 field_name: field_event_member
 entity_type: node
 bundle: event
-label: Member
+label: Organizer
 description: ''
 required: true
 translatable: false

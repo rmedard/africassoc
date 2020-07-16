@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d99ebc0d9d715d049156c822c93c9ff3",
+    "content-hash": "56ac7d1b8770192505527969c9a4f1d4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2086,17 +2086,17 @@
         },
         {
             "name": "drupal/bootstrap_barrio",
-            "version": "4.30.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
-                "reference": "8.x-4.30"
+                "reference": "5.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.30.zip",
-                "reference": "8.x-4.30",
-                "shasum": "9de043aa126cdd7ebe383369e0a9d2f54d38db98"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-5.0.1.zip",
+                "reference": "5.0.1",
+                "shasum": "0c414ef75b2dec752629425551722bfb94499114"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -2105,8 +2105,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.30",
-                    "datestamp": "1592500696",
+                    "version": "5.0.1",
+                    "datestamp": "1594567872",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2136,17 +2136,17 @@
         },
         {
             "name": "drupal/bootstrap_sass",
-            "version": "1.13.0",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_sass.git",
-                "reference": "8.x-1.13"
+                "reference": "5.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_sass-8.x-1.13.zip",
-                "reference": "8.x-1.13",
-                "shasum": "f4762bbc899bdfc6d41dbb7f787fd791d545f9ae"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_sass-5.0.0.zip",
+                "reference": "5.0.0",
+                "shasum": "58da8595e1872ad7fe9b4db7f1b775e4bafe4bc4"
             },
             "require": {
                 "drupal/bootstrap_barrio": ">=4.23.0",
@@ -2155,8 +2155,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.13",
-                    "datestamp": "1592503342",
+                    "version": "5.0.0",
+                    "datestamp": "1592503301",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3546,6 +3546,64 @@
             "homepage": "https://www.drupal.org/project/views_bootstrap",
             "support": {
                 "source": "https://git.drupalcode.org/project/views_bootstrap"
+            }
+        },
+        {
+            "name": "drupal/views_slideshow",
+            "version": "4.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_slideshow.git",
+                "reference": "8.x-4.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_slideshow-8.x-4.7.zip",
+                "reference": "8.x-4.7",
+                "shasum": "d8ca1b5e01f5481a34fe425a2cf3c18d46d15f5c"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-4.7",
+                    "datestamp": "1587026408",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/160350/committers"
+                },
+                {
+                    "name": "NickDickinsonWilde",
+                    "homepage": "https://www.drupal.org/user/3094661"
+                },
+                {
+                    "name": "redndahead",
+                    "homepage": "https://www.drupal.org/user/160320"
+                },
+                {
+                    "name": "vbouchet",
+                    "homepage": "https://www.drupal.org/user/1671428"
+                }
+            ],
+            "description": "Describes relationships between entities.",
+            "homepage": "https://www.drupal.org/project/views_slideshow",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_slideshow",
+                "issues": "https://www.drupal.org/project/issues/views_slideshow",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {

@@ -153,3 +153,16 @@ div.field--name-field-association-logo > img {
   width: 100%;
   height: auto;
 }
+
+div.block#block-views-block-events-block-single-event-images {
+  display: flex;
+  justify-content: center;
+}
+
+div.field--type-entity-reference {
+  margin: 0;
+}
+
+footer {
+  margin-top: 1em;
+}

@@ -1,7 +1,7 @@
-google_map_api_key: AIzaSyC-W3ZVuMP0daysEFeuo5OYTjhp0-OOpV8
+google_map_api_key: AIzaSyBVtFY-I-WGYf4qnMJzAzoWvq-nIwkCvLQ
 google_map_custom_url_parameters:
   libraries: {  }
-  region: ''
+  region: BE
   language: ''
   v: ''
   client: ''
@@ -9,6 +9,6 @@ google_map_custom_url_parameters:
 _core:
   default_config_hash: wNpilbhustdj8tLBsYJ6GPdxS5lUKU5rRei_XxSyd3A
 google_map_api_server_key: ''
-use_current_language: true
+use_current_language: false
 china_mode: false
 google_maps_base_url: ''

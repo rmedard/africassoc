@@ -5,11 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.field_event_activity_type
-    - field.field.node.event.field_event_address
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_description
     - field.field.node.event.field_event_how_know
     - field.field.node.event.field_event_images
+    - field.field.node.event.field_event_location
     - field.field.node.event.field_event_member
     - field.field.node.event.field_event_organizer_assoc
     - field.field.node.event.field_event_payment_info
@@ -90,8 +90,8 @@ content:
     third_party_settings: {  }
 hidden:
   field_event_activity_type: true
-  field_event_address: true
   field_event_how_know: true
+  field_event_location: true
   field_event_member: true
   field_event_organizer_assoc: true
   field_event_payment_info: true

@@ -1,0 +1,15 @@
+uuid: f3379183-4caf-4175-9cef-b42870ddecf7
+langcode: en
+status: true
+dependencies: {  }
+name: event_images_slideshow
+label: 'Event Images Slideshow'
+effects:
+  1f6390ee-13e3-4a3d-8e8e-b4a742ee4166:
+    uuid: 1f6390ee-13e3-4a3d-8e8e-b4a742ee4166
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: 300
+      upscale: true

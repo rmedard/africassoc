@@ -1,0 +1,33 @@
+uuid: 664c4816-b645-4a67-8d64-d03046acebe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - ctools
+    - views
+  theme:
+    - africassoc
+id: views_block__events_block_single_event_images
+theme: africassoc
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:events-block_single_event_images'
+settings:
+  id: 'views_block:events-block_single_event_images'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '3'
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

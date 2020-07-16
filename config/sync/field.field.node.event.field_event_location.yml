@@ -1,0 +1,28 @@
+uuid: 7d2db4a6-534e-4d69-91e3-0a0980e5f721
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_location
+    - node.type.event
+  module:
+    - geolocation
+id: node.event.field_event_location
+field_name: field_event_location
+entity_type: node
+bundle: event
+label: Location
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    lat_sin: '0.77599071797503'
+    lat_cos: '0.63074432666224'
+    lng_rad: '0.075774289780082'
+    value: '50.89494101953717, 4.341546999999997'
+    lat: '50.89494101953717'
+    lng: '4.341546999999997'
+default_value_callback: ''
+settings: {  }
+field_type: geolocation
