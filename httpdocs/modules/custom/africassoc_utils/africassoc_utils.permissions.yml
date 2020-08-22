@@ -1,0 +1,5 @@
+edit own organized event:
+  title: 'Edit own organized event'
+  description: 'Edit event of which the logged in user is the organizer.'
+permission_callbacks:
+  - \Drupal\africassoc_utils\Perm\ForaPermissions::permissions

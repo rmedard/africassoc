@@ -5,3 +5,11 @@ africassoc_forms.register_form:
     _form: 'Drupal\africassoc_forms\Form\MemberRegisterForm'
   requirements:
     _permission: 'access content'
+
+africassoc_forms.dependent_dropdown:
+  path: '/dependent-dropdown-form'
+  defaults:
+    _title: 'Dependent dropdown form'
+    _form: 'Drupal\africassoc_forms\Form\DependentDropdown'
+  requirements:
+    _permission: 'access content'

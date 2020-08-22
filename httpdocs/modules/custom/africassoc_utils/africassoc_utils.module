@@ -1,7 +1,10 @@
 <?php
 
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
+use Drupal\node\NodeInterface;
 use Drupal\views\Plugin\views\query\QueryPluginBase;
 use Drupal\views\Plugin\views\query\Sql;
 use Drupal\views\ViewExecutable;
@@ -48,4 +51,15 @@ function africassoc_utils_views_query_alter(ViewExecutable $view, QueryPluginBas
         ]);
     }
   }
+}
+
+/**
+ * Implements hook_node_access().
+ */
+function africassoc_utils_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  kint(array($op, $account));
+  if ($node->bundle() != 'event' || $op != 'update') {
+    return AccessResult::neutral();
+  }
+  return AccessResult::neutral();
 }
