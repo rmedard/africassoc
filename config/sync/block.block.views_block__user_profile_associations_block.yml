@@ -1,0 +1,30 @@
+uuid: 0b685bb8-43a3-464b-b99e-1cbe9cc7ef96
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_profile_associations
+  module:
+    - system
+    - views
+  theme:
+    - africassoc
+id: views_block__user_profile_associations_block
+theme: africassoc
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:user_profile_associations-block_user_profile_associations'
+settings:
+  id: 'views_block:user_profile_associations-block_user_profile_associations'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false

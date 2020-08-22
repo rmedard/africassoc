@@ -1,0 +1,30 @@
+uuid: e919b362-eeaf-40ea-89c2-282858c44acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_profile_events
+  module:
+    - system
+    - views
+  theme:
+    - africassoc
+id: views_block__user_profile_events_block_user_profile_events
+theme: africassoc
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:user_profile_events-block_user_profile_events'
+settings:
+  id: 'views_block:user_profile_events-block_user_profile_events'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
