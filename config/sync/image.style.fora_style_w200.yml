@@ -1,0 +1,15 @@
+uuid: 260f480c-1803-4908-8d5c-30974c5be816
+langcode: en
+status: true
+dependencies: {  }
+name: fora_style_w200
+label: 'Fora Style W200'
+effects:
+  87c5b312-2144-437d-81ac-cb3d49c59301:
+    uuid: 87c5b312-2144-437d-81ac-cb3d49c59301
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: null
+      upscale: true

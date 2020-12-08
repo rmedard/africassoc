@@ -1,0 +1,7 @@
+africassoc_pages.fora_brussels:
+  path: '/fora-brussels'
+  defaults:
+    _controller: '\Drupal\africassoc_pages\Controller\PagesController::foraBrusselsPage'
+    _title: 'FORA Brussels'
+  requirements:
+    _permission: 'access content'

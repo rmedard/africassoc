@@ -1,0 +1,23 @@
+uuid: 26f66d43-ab10-4042-a943-a38c3159ae0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.content_summary_block
+    - field.storage.block_content.field_read_more_link
+  module:
+    - link
+id: block_content.content_summary_block.field_read_more_link
+field_name: field_read_more_link
+entity_type: block_content
+bundle: content_summary_block
+label: 'Read more link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

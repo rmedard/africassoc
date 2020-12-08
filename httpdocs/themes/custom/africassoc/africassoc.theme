@@ -78,7 +78,23 @@ function africassoc_preprocess_page_title(&$variables) {
 
 /**
  * Implements hook_js_alter().
+ *
+ * @param $javascript
+ * @param \Drupal\Core\Asset\AttachedAssetsInterface $assets
  */
 function africassoc_js_alter(&$javascript, AttachedAssetsInterface $assets) {
   unset($javascript['core/misc/tabledrag.js']);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function africassoc_preprocess_page(&$variables) {
+  $requestRoute = Drupal::service('current_route_match')->getRouteName();
+  $noSidebarFirstPages = ['africassoc_pages.fora_brussels'];
+  if (in_array($requestRoute, $noSidebarFirstPages)) {
+    unset($variables['page']['sidebar_first']);
+  }
 }

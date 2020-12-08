@@ -1,0 +1,21 @@
+uuid: 2e4268ab-57d9-41d5-8b21-b02bc5033693
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.content_summary_block
+    - field.storage.block_content.field_introductory_text
+  module:
+    - text
+id: block_content.content_summary_block.field_introductory_text
+field_name: field_introductory_text
+entity_type: block_content
+bundle: content_summary_block
+label: 'Introductory Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
