@@ -8,12 +8,16 @@
     <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-sm-3">
-          <img class="card-img-top rounded pt-3 pl-3" src="{{ vgc.field_introductory_image.entity.uri.value | image_style('fora_style_w200') }}">
+          <img class="rounded pt-3 pl-3"
+               src="{{ vgc.field_introductory_image.entity.uri.value | image_style('fora_style_w200') }}">
         </div>
         <div class="col-sm-9">
           <div class="card-body">
             {{ vgc.field_introductory_text.value | raw }}
-            <a href="{{ vgc.field_read_more_link.uri }}" class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+            {% if vgc.field_read_more_link.uri %}
+            <a href="{{ (vgc.field_read_more_link.0.url.external) ? vgc.field_read_more_link.uri : path(vgc.field_read_more_link.0.url.routeName) }}"
+               class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -21,25 +25,33 @@
     <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-sm-3">
-          <img class="card-img-top rounded pt-3 pl-3" src="{{ n22.field_introductory_image.entity.uri.value | image_style('fora_style_w200') }}">
+          <img class="rounded pt-3 pl-3"
+               src="{{ n22.field_introductory_image.entity.uri.value | image_style('fora_style_w200') }}">
         </div>
         <div class="col-sm-9">
           <div class="card-body">
             {{ n22.field_introductory_text.value | raw }}
-            <a href="{{ n22.field_read_more_link.uri }}" class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+            {% if n22.field_read_more_link.uri %}
+            <a href="{{ (n22.field_read_more_link.0.url.external) ? n22.field_read_more_link.uri : path(n22.field_read_more_link.0.url.routeName) }}"
+               class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+            {% endif %}
           </div>
         </div>
       </div>
     </div>
     <div class="card mb-3">
       <div class="row">
-        <div class="col-sm-4">
-          <img class="card-img-top rounded pt-3 pl-3" src="{{ subsidies.field_introductory_image.entity.uri.value | image_style('fora_style_w200') }}">
+        <div class="col-sm-3">
+          <img class="rounded pt-3 pl-3"
+               src="{{ subsidies.field_introductory_image.entity.uri.value | image_style('fora_style_w200') }}">
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-9">
           <div class="card-body">
             {{ subsidies.field_introductory_text.value | raw }}
-            <a href="{{ subsidies.field_read_more_link.uri }}" class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+            {% if subsidies.field_read_more_link.uri %}
+            <a href="{{ (subsidies.field_read_more_link.0.url.external) ? subsidies.field_read_more_link.uri : path(subsidies.field_read_more_link.0.url.routeName) }}"
+               class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -47,10 +59,15 @@
   </div>
   <div class="col-md-3">
     <div class="card mb-3">
-      <img class="card-img-top rounded" src="{{ membership.field_introductory_image.entity.uri.value | image_style('medium') }}" alt="Card image cap">
+      <img class="rounded" src="{{ membership.field_introductory_image.entity.uri.value | image_style('medium') }}"
+           alt="Card image cap">
       <div class="card-body">
         {{ membership.field_introductory_text.value | raw }}
-        <a href="{{ membership.field_read_more_link.uri }}" class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+        {% if membership.field_read_more_link.uri %}
+        <a
+          href="{{ (membership.field_read_more_link.0.url.external) ? membership.field_read_more_link.uri : path(membership.field_read_more_link.0.url.routeName) }}"
+          class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+        {% endif %}
       </div>
     </div>
   </div>
