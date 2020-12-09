@@ -16,7 +16,7 @@
             {{ vgc.field_introductory_text.value | raw }}
             {% if vgc.field_read_more_link.uri %}
             <a href="{{ (vgc.field_read_more_link.0.url.external) ? vgc.field_read_more_link.uri : path(vgc.field_read_more_link.0.url.routeName) }}"
-               class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+               class="btn btn-outline-primary stretched-link btn-sm mt-3" target="{{ (vgc.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">{{ 'Read more' | t }}</a>
             {% endif %}
           </div>
         </div>
@@ -33,7 +33,7 @@
             {{ n22.field_introductory_text.value | raw }}
             {% if n22.field_read_more_link.uri %}
             <a href="{{ (n22.field_read_more_link.0.url.external) ? n22.field_read_more_link.uri : path(n22.field_read_more_link.0.url.routeName) }}"
-               class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+               class="btn btn-outline-primary stretched-link btn-sm mt-3" target="{{ (n22.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">{{ 'Read more' | t }}</a>
             {% endif %}
           </div>
         </div>
@@ -50,7 +50,7 @@
             {{ subsidies.field_introductory_text.value | raw }}
             {% if subsidies.field_read_more_link.uri %}
             <a href="{{ (subsidies.field_read_more_link.0.url.external) ? subsidies.field_read_more_link.uri : path(subsidies.field_read_more_link.0.url.routeName) }}"
-               class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+               class="btn btn-outline-primary stretched-link btn-sm mt-3" target="{{ (subsidies.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">{{ 'Read more' | t }}</a>
             {% endif %}
           </div>
         </div>
@@ -66,7 +66,7 @@
         {% if membership.field_read_more_link.uri %}
         <a
           href="{{ (membership.field_read_more_link.0.url.external) ? membership.field_read_more_link.uri : path(membership.field_read_more_link.0.url.routeName) }}"
-          class="btn btn-outline-primary stretched-link btn-sm mt-3">{{ 'Read more' | t }}</a>
+          class="btn btn-outline-primary stretched-link btn-sm mt-3" target="{{ (membership.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">{{ 'Read more' | t }}</a>
         {% endif %}
       </div>
     </div>
