@@ -8,10 +8,27 @@ use Drupal;
 use Drupal\block_content\BlockContentInterface;
 use Drupal\block_content\Entity\BlockContent;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Menu\MenuLinkTreeElement;
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\menu_link_content\Plugin\Menu\MenuLinkContent;
 
 class PagesController extends ControllerBase {
 
   public function foraBrusselsPage(): array {
+    $menuTree = Drupal::menuTree()->load('space-for-your-activity', new MenuTreeParameters());
+    $activitySpace = [];
+    foreach ($menuTree as $element) {
+      if ($element instanceof MenuLinkTreeElement) {
+        $content = $element->link;
+        if ($content instanceof MenuLinkContent) {
+          $url = $content->getUrlObject()->getUri();
+          $title = $element->link->getTitle();
+          $link['url'] = $url;
+          $link['title'] = $title;
+          array_push($activitySpace, $link);
+        }
+      }
+    }
     $language = Drupal::languageManager()->getCurrentLanguage()->getId();
     $fora_blocks = BlockContent::loadMultiple([1, 2, 3, 3, 4, 5]);
     $fora_brussels = [];
@@ -48,6 +65,7 @@ class PagesController extends ControllerBase {
       '#n22' => $n22,
       '#subsidies' => $subsidies,
       '#membership' => $membership,
+      '#activitySpace' => $activitySpace
     ];
   }
 }

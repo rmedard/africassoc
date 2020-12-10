@@ -15,8 +15,12 @@
           <div class="card-body">
             {{ vgc.field_introductory_text.value | raw }}
             {% if vgc.field_read_more_link.uri %}
-            <a href="{{ (vgc.field_read_more_link.0.url.external) ? vgc.field_read_more_link.uri : path(vgc.field_read_more_link.0.url.routeName) }}"
-               class="btn btn-outline-primary stretched-link btn-sm mt-3" target="{{ (vgc.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">{{ 'Read more' | t }}</a>
+              <a
+                href="{{ (vgc.field_read_more_link.0.url.external) ? vgc.field_read_more_link.uri : path(vgc.field_read_more_link.0.url.routeName) }}"
+                class="btn btn-outline-primary stretched-link btn-sm mt-3"
+                target="{{ (vgc.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">
+                {{ 'Read more' | t }}
+              </a>
             {% endif %}
           </div>
         </div>
@@ -32,8 +36,12 @@
           <div class="card-body">
             {{ n22.field_introductory_text.value | raw }}
             {% if n22.field_read_more_link.uri %}
-            <a href="{{ (n22.field_read_more_link.0.url.external) ? n22.field_read_more_link.uri : path(n22.field_read_more_link.0.url.routeName) }}"
-               class="btn btn-outline-primary stretched-link btn-sm mt-3" target="{{ (n22.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">{{ 'Read more' | t }}</a>
+              <a
+                href="{{ (n22.field_read_more_link.0.url.external) ? n22.field_read_more_link.uri : path(n22.field_read_more_link.0.url.routeName) }}"
+                class="btn btn-outline-primary stretched-link btn-sm mt-3"
+                target="{{ (n22.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">
+                {{ 'Read more' | t }}
+              </a>
             {% endif %}
           </div>
         </div>
@@ -49,8 +57,12 @@
           <div class="card-body">
             {{ subsidies.field_introductory_text.value | raw }}
             {% if subsidies.field_read_more_link.uri %}
-            <a href="{{ (subsidies.field_read_more_link.0.url.external) ? subsidies.field_read_more_link.uri : path(subsidies.field_read_more_link.0.url.routeName) }}"
-               class="btn btn-outline-primary stretched-link btn-sm mt-3" target="{{ (subsidies.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">{{ 'Read more' | t }}</a>
+              <a
+                href="{{ (subsidies.field_read_more_link.0.url.external) ? subsidies.field_read_more_link.uri : path(subsidies.field_read_more_link.0.url.routeName) }}"
+                class="btn btn-outline-primary stretched-link btn-sm mt-3"
+                target="{{ (subsidies.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">
+                {{ 'Read more' | t }}
+              </a>
             {% endif %}
           </div>
         </div>
@@ -64,11 +76,21 @@
       <div class="card-body">
         {{ membership.field_introductory_text.value | raw }}
         {% if membership.field_read_more_link.uri %}
-        <a
-          href="{{ (membership.field_read_more_link.0.url.external) ? membership.field_read_more_link.uri : path(membership.field_read_more_link.0.url.routeName) }}"
-          class="btn btn-outline-primary stretched-link btn-sm mt-3" target="{{ (membership.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">{{ 'Read more' | t }}</a>
+          <a
+            href="{{ (membership.field_read_more_link.0.url.external) ? membership.field_read_more_link.uri : path(membership.field_read_more_link.0.url.routeName) }}"
+            class="btn btn-outline-primary stretched-link btn-sm mt-3"
+            target="{{ (membership.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">
+            {{ 'Read more' | t }}
+          </a>
         {% endif %}
       </div>
+    </div>
+    <div class="card mb-3">
+      <ul>
+      {% for link in activitySpace %}
+        <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></li>
+      {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
