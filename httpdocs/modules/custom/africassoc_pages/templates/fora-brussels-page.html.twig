@@ -58,7 +58,7 @@
             {{ subsidies.field_introductory_text.value | raw }}
             {% if subsidies.field_read_more_link.uri %}
               <a
-                href="{{ (subsidies.field_read_more_link.0.url.external) ? subsidies.field_read_more_link.uri : path(subsidies.field_read_more_link.0.url.routeName) }}"
+                href="{{ (subsidies.field_read_more_link.0.url.external) ? subsidies.field_read_more_link.uri : path(subsidies.field_read_more_link.0.url.routeName, {'node': subsidies.field_read_more_link.0.url.routeParameters.node}) }}"
                 class="btn btn-outline-primary stretched-link btn-sm mt-3"
                 target="{{ (subsidies.field_read_more_link.0.url.external) ? '_blank' : '_parent' }}">
                 {{ 'Read more' | t }}
