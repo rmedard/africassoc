@@ -1,0 +1,8 @@
+uuid: 734332b2-23fc-4fab-bd2d-64b27ca8acdf
+langcode: nl
+status: true
+dependencies: {  }
+id: space-for-your-activity
+label: 'Ruimte Voor Uw Activiteit'
+description: ''
+locked: false
