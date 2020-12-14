@@ -1,6 +1,13 @@
 <div class="card mb-3">
   <div class="card-body">
     {{ fora_brussels.field_introductory_text.value | raw }}
+    {% if fora_brussels.field_read_more_link.uri %}
+      <a
+        href="{{ path(fora_brussels.field_read_more_link.0.url.routeName, {'node': fora_brussels.field_read_more_link.0.url.routeParameters.node}) }}"
+        class="btn btn-outline-primary stretched-link btn-sm mt-3">
+        {{ 'Read more' | t }}
+      </a>
+    {% endif %}
   </div>
 </div>
 <div class="row">

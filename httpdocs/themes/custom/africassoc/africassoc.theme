@@ -11,6 +11,7 @@ use Drupal\Core\Render\Markup;
 use Drupal\Core\StringTranslation\PluralTranslatableMarkup;
 use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 use Drupal\views\Plugin\views\field\EntityField;
 use Drupal\views\ResultRow;
 use Drupal\views\ViewExecutable;
@@ -96,5 +97,13 @@ function africassoc_preprocess_page(&$variables) {
   $noSidebarFirstPages = ['africassoc_pages.fora_brussels'];
   if (in_array($requestRoute, $noSidebarFirstPages)) {
     unset($variables['page']['sidebar_first']);
+  }
+
+  if ($requestRoute == 'entity.node.canonical') {
+    $node = Drupal::routeMatch()->getParameter('node');
+    $noSidebarFirstNodes = [27];
+    if ($node instanceof NodeInterface and in_array($node->id(), $noSidebarFirstNodes)) {
+      unset($variables['page']['sidebar_first']);
+    }
   }
 }
