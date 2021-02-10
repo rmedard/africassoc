@@ -5,3 +5,11 @@ africassoc_pages.fora_brussels:
     _title: 'FORA Brussels'
   requirements:
     _permission: 'access content'
+
+africassoc_pages.development:
+  path: '/development'
+  defaults:
+    _controller: '\Drupal\africassoc_pages\Controller\PagesController::developmentPage'
+    _title_callback: '\Drupal\africassoc_pages\Controller\PagesController::developmentPageTitle'
+  requirements:
+    _permission: 'access content'

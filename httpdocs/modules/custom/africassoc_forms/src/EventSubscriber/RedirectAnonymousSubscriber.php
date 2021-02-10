@@ -19,7 +19,7 @@ class RedirectAnonymousSubscriber implements EventSubscriberInterface {
     $this->account = Drupal::currentUser();
   }
 
-  public static function getSubscribedEvents() {
+  public static function getSubscribedEvents(): array {
     $events[KernelEvents::REQUEST][] = ['checkAuthStatus'];
     return $events;
   }

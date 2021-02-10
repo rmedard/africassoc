@@ -7,15 +7,20 @@ namespace Drupal\africassoc_pages\Controller;
 use Drupal;
 use Drupal\block_content\BlockContentInterface;
 use Drupal\block_content\Entity\BlockContent;
+use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
+use Drupal\Component\Plugin\Exception\PluginNotFoundException;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Menu\MenuLinkTreeElement;
 use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\menu_link_content\Plugin\Menu\MenuLinkContent;
+use Drupal\node\Entity\Node;
 
 class PagesController extends ControllerBase {
 
   public function foraBrusselsPage(): array {
-    $menuTree = Drupal::menuTree()->load('space-for-your-activity', new MenuTreeParameters());
+    $menuTree = Drupal::menuTree()
+      ->load('space-for-your-activity', new MenuTreeParameters());
     $activitySpace = [];
     foreach ($menuTree as $element) {
       if ($element instanceof MenuLinkTreeElement) {
@@ -65,7 +70,33 @@ class PagesController extends ControllerBase {
       '#n22' => $n22,
       '#subsidies' => $subsidies,
       '#membership' => $membership,
-      '#activitySpace' => $activitySpace
+      '#activitySpace' => $activitySpace,
     ];
   }
+
+  public function developmentPage(): array {
+    $pages = [];
+    try {
+      $storage = Drupal::entityTypeManager()->getStorage('node');
+      $query = $storage->getQuery()
+        ->condition('type', 'page')
+        ->condition('status', Node::PUBLISHED)
+        ->condition('field_page_type', 'development');
+      $pageIds = $query->execute();
+      if (!empty($pageIds)) {
+        $pages = Node::loadMultiple($pageIds);
+      }
+    } catch (InvalidPluginDefinitionException | PluginNotFoundException $e) {
+      Drupal::logger('africassoc_pages')->error($e->getMessage());
+    }
+    return [
+      '#theme' => 'development_page',
+      '#pages' => $pages
+    ];
+  }
+
+  public function developmentPageTitle(): TranslatableMarkup {
+    return $this->t('Development');
+  }
+
 }

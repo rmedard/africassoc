@@ -19,11 +19,11 @@ class MemberRegisterForm extends FormBase {
   /**
    * @return string|void
    */
-  public function getFormId() {
+  public function getFormId(): string {
     return 'member_register_form';
   }
 
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state): array {
     $form['help'] = [
       '#type' => 'markup',
       '#markup' => $this->t('Already has an account? <a href="@login-page">Please login.</a>', ['@login-page' => Url::fromRoute('user.login')->getInternalPath()])

@@ -1,0 +1,7 @@
+<div class="row">
+  {% for page in pages %}
+    <div class="col-6">
+      <a href="{{ path('entity.node.canonical', {'node': page.nid.value}) }}" class="btn btn-outline-primary btn-block mb-3">{{ page.title.value }}</a>
+    </div>
+  {% endfor %}
+</div>

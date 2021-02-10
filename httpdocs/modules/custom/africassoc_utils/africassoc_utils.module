@@ -54,6 +54,14 @@ function africassoc_utils_views_query_alter(ViewExecutable $view, QueryPluginBas
 }
 
 /**
+ * Implements hook_entity_access().
+ */
+function africassoc_utils_entity_access(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Session\AccountInterface $account) {
+//  $path = Drupal::service('path_alias.manager')->getPathByAlias('/pages/subsidies-ontwikkelingssamenwerking');
+//  kint($path);
+}
+
+/**
  * Implements hook_node_access().
  */
 function africassoc_utils_node_access(NodeInterface $node, $op, AccountInterface $account) {

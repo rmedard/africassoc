@@ -21,6 +21,11 @@ function africassoc_pages_theme($existing, $type, $theme, $path): array {
         'membership' => [],
         'activitySpace' => []
       ]
+    ],
+    'development_page' => [
+      'variables' => [
+        'pages' => []
+      ]
     ]
   ];
 }

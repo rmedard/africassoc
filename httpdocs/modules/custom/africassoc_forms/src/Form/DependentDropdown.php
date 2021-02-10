@@ -9,11 +9,11 @@ use Drupal\Core\Form\FormStateInterface;
 
 class DependentDropdown extends FormBase {
 
-  public function getFormId() {
+  public function getFormId(): string {
     return 'ajax_example_dependentdropdown';
   }
 
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state): array {
     $instrument_family_options = static::getFirstDropdownOptions();
     if (empty($form_state->getValue('instrument_family_dropdown'))) {
       $selected_family = key($instrument_family_options);
